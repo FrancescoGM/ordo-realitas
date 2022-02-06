@@ -63,7 +63,10 @@ export const {
       thick: '4'
     },
     shadows: {
-      red: '0px 0px 10px 10px #FF230F',
+      'text-red': '0px 0px 10px #FF230F',
+      'text-blue': '0px 0px 10px #0766D3',
+      'text-yellow': '0px 0px 10px #FFBC4F',
+      red: '0px 10px 10px #FF230F',
       blue: '0px 0px 10px 10px #0766D3',
       yellow: '0px 0px 10px 10px #FFBC4F'
     },

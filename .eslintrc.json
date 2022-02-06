@@ -22,6 +22,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks", "import-helpers"],
   "rules": {
+    "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "require-jsdoc": "off",
     "camelcase": "off",
     "import/no-duplicates": "off",
