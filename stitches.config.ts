@@ -84,6 +84,9 @@ export const {
       '16': '4rem',
       '20': '5rem',
       '40': '10rem'
+    },
+    zIndices: {
+      header: '100'
     }
   },
   media: {

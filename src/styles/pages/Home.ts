@@ -6,11 +6,30 @@ export const HomeHeaderContainer = styled('header', {
   paddingInline: '$4',
 
   position: 'fixed',
+  zIndex: '$header',
   top: '0',
   left: '0',
   right: '0',
   background: 'rgba(0, 0, 0, 0.9)',
   backdropFilter: 'saturate(120%) blur(10px)'
+})
+
+export const HomeHeading = styled('h2', {
+  fontSize: '$3xl',
+  fontWeight: 'normal',
+  variants: {
+    textShadow: {
+      red: {
+        textShadow: '$text-red'
+      },
+      blue: {
+        textShadow: '$text-blue'
+      },
+      yellow: {
+        textShadow: '$text-yellow'
+      }
+    }
+  }
 })
 
 export const HomeHeaderContent = styled('div', {
@@ -36,41 +55,20 @@ export const HomeHeaderContent = styled('div', {
   }
 })
 
-export const HomeBanner = styled('img', {
-  marginTop: '80px',
-  width: '100%',
-  maxHeight: '670px',
-  objectFit: 'cover',
-  objectPosition: '0 20%'
-})
-
 export const HomeArrowImage = styled('img', {
-  margin: '0 auto 80px'
+  margin: '80px auto'
 })
 
-export const HomeContainer = styled('div', {
+export const HomeContainer = styled('main', {
   width: '100%',
-  paddingBlock: '$20',
-  paddingInline: '$4',
+  paddingTop: '$20',
+
+  display: 'flex',
+  flexDirection: 'column'
+})
+
+export const HomeGetStatedSection = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center'
-})
-
-export const HomeHeading = styled('h2', {
-  fontSize: '$3xl',
-  fontWeight: 'normal',
-  variants: {
-    textShadow: {
-      red: {
-        textShadow: '$text-red'
-      },
-      blue: {
-        textShadow: '$text-blue'
-      },
-      yellow: {
-        textShadow: '$text-yellow'
-      }
-    }
-  }
 })

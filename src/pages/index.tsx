@@ -1,12 +1,13 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import {
-  HomeBanner,
   HomeArrowImage,
   HomeContainer,
   HomeHeaderContainer,
   HomeHeaderContent,
-  HomeHeading
+  HomeHeading,
+  HomeGetStatedSection
 } from '../styles/pages/Home'
 
 export default function Home(): JSX.Element {
@@ -26,12 +27,22 @@ export default function Home(): JSX.Element {
           </nav>
         </HomeHeaderContent>
       </HomeHeaderContainer>
-      <HomeBanner src="/images/ordo_realitas.webp" alt="Banner ordo realitas" />
       <HomeContainer>
-        <HomeArrowImage src="/icons/arrow.svg" alt="Ícone de flecha" />
-        <HomeHeading textShadow="red">
-          VENHA SE JUNTAR A ORDO REALITAS
-        </HomeHeading>
+        <Image
+          src="/images/ordo_realitas.webp"
+          alt="Banner ordo realitas"
+          width={1366}
+          height={670}
+          objectFit="cover"
+          layout="intrinsic"
+          objectPosition="0 15%"
+        />
+        <HomeGetStatedSection>
+          <HomeArrowImage src="/icons/arrow.svg" alt="Ícone de flecha" />
+          <HomeHeading textShadow="red">
+            VENHA SE JUNTAR A ORDO REALITAS
+          </HomeHeading>
+        </HomeGetStatedSection>
       </HomeContainer>
     </>
   )
