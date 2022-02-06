@@ -10,13 +10,14 @@ export const HomeHeaderContainer = styled('header', {
   top: '0',
   left: '0',
   right: '0',
-  background: 'rgba(0, 0, 0, 0.9)',
+  background: 'rgba(0, 0, 0, 0.8)',
   backdropFilter: 'saturate(120%) blur(10px)'
 })
 
 export const HomeHeading = styled('h2', {
   fontSize: '$3xl',
   fontWeight: 'normal',
+  textAlign: 'center',
   variants: {
     textShadow: {
       red: {
@@ -56,12 +57,13 @@ export const HomeHeaderContent = styled('div', {
 })
 
 export const HomeArrowImage = styled('img', {
+  width: '2px',
+  height: '80px',
   margin: '80px auto'
 })
 
 export const HomeContainer = styled('main', {
   width: '100%',
-  paddingTop: '$20',
 
   display: 'flex',
   flexDirection: 'column'
@@ -70,5 +72,65 @@ export const HomeContainer = styled('main', {
 export const HomeGetStatedSection = styled('section', {
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center'
+  alignItems: 'center',
+  paddingInline: '$4'
+})
+
+export const HomeSectionContent = styled('div', {
+  width: '100%',
+  maxWidth: '1120px',
+  margin: '80px 0 auto',
+
+  display: 'flex',
+  justifyContent: 'space-between',
+  gap: '$5',
+
+  '@lg': {
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
+})
+
+export const HomeSectionText = styled('p', {
+  gridArea: 'text',
+  maxWidth: '600px',
+  marginBlock: '$5',
+  display: 'inline-block',
+  fontSize: '$md',
+
+  span: {
+    marginBottom: '$5',
+    display: 'inline-block'
+  },
+
+  variants: {
+    textAlign: {
+      left: {
+        textAlign: 'left',
+        '@lg': {
+          textAlign: 'center'
+        }
+      },
+      right: {
+        textAlign: 'right',
+        '@lg': {
+          textAlign: 'center'
+        }
+      }
+    }
+  }
+})
+
+export const HomeSectionImageWrapper = styled('div', {
+  width: '100%',
+  maxWidth: '330px'
+})
+
+export const HomeBannerWrapper = styled('div', {
+  width: '100%',
+  paddingTop: '$20',
+
+  span: {
+    maxHeight: '670px'
+  }
 })

@@ -21,7 +21,7 @@ export const globalCSS = globalCss({
   },
   body: {
     background: '$black',
-    color: '$neutralColor.100',
+    color: '$neutralColor-100',
     fontFamily: '$default'
   },
   'body, input, textarea, select, button': {
