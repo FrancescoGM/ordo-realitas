@@ -31,35 +31,33 @@ export default class Document extends NextDocument {
 
           <meta name="robots" content="all" />
 
+          <meta name="title" content="Ordo Realitas" />
+          <meta
+            name="description"
+            content="Ordo Realitas é uma plataforma para os jogadores de ordem paranormal rpg armazenarem seus personagens e ter uma experiência imersiva como na websérie de Ordem Paranormal."
+          />
           <meta
             name="keywords"
             content="ordem paranormal, ordo realitas, rpg, ordem paranormal rpg"
           />
 
-          <meta name="description" content="Ordo Realitas" />
-
-          <meta property="og:site_name" content="Ordo Realitas" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ordo-realitas.com.br" />
           <meta property="og:title" content="Ordo Realitas" />
           <meta
             property="og:description"
-            content="Ordo Realitas é uma plataforma para os jogadores de ordem 
-            paranormal rpg armazenarem seus personagens e ter uma experiência 
-            imersiva como na websérie de Ordem Paranormal"
+            content="Ordo Realitas é uma plataforma para os jogadores de ordem paranormal rpg armazenarem seus personagens e ter uma experiência imersiva como na websérie de Ordem Paranormal."
           />
           <meta property="og:image" content="/thumbnail.webp" />
-          <meta property="og:image:type" content="image/webp" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
 
-          <meta name="twitter:title" content="Ordo Realitas" />
-          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://ordo-realitas.com.br" />
+          <meta property="twitter:title" content="Ordo Realitas" />
           <meta
-            name="twitter:description"
-            content="Ordo Realitas é uma plataforma para os jogadores de ordem 
-            paranormal rpg armazenarem seus personagens e ter uma experiência 
-            imersiva como na websérie de Ordem Paranormal"
+            property="twitter:description"
+            content="Ordo Realitas é uma plataforma para os jogadores de ordem paranormal rpg armazenarem seus personagens e ter uma experiência imersiva como na websérie de Ordem Paranormal."
           />
-          <meta name="twitter:image" content="/thumbnail.webp" />
+          <meta property="twitter:image" content="/thumbnail.webp" />
         </Head>
         <body>
           <Main />
