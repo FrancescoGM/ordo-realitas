@@ -59,21 +59,23 @@ export const HomeHeaderContent = styled('div', {
 export const HomeArrowImage = styled('img', {
   width: '2px',
   height: '80px',
-  margin: '80px auto'
+  margin: '80px auto 0'
 })
 
 export const HomeContainer = styled('main', {
   width: '100%',
+  marginBottom: '$20',
 
   display: 'flex',
   flexDirection: 'column'
 })
 
-export const HomeGetStatedSection = styled('section', {
+export const HomeSection = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  paddingInline: '$4'
+  paddingInline: '$4',
+  paddingTop: '$20'
 })
 
 export const HomeSectionContent = styled('div', {
@@ -88,6 +90,14 @@ export const HomeSectionContent = styled('div', {
   '@lg': {
     flexDirection: 'column',
     alignItems: 'center'
+  },
+
+  variants: {
+    isCentered: {
+      true: {
+        alignItems: 'center'
+      }
+    }
   }
 })
 
@@ -133,4 +143,14 @@ export const HomeBannerWrapper = styled('div', {
   span: {
     maxHeight: '670px'
   }
+})
+
+export const HomeAboutSection = styled('section', {
+  paddingBlock: '$20',
+  paddingInline: '$4',
+  background: '$neutralColor-900',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
 })

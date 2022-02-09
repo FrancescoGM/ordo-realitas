@@ -7,11 +7,12 @@ import {
   HomeHeaderContainer,
   HomeHeaderContent,
   HomeHeading,
-  HomeGetStatedSection,
+  HomeSection,
   HomeSectionContent,
   HomeSectionText,
   HomeSectionImageWrapper,
-  HomeBannerWrapper
+  HomeBannerWrapper,
+  HomeAboutSection
 } from '../styles/pages/Home'
 
 export default function Home(): JSX.Element {
@@ -45,7 +46,7 @@ export default function Home(): JSX.Element {
       </HomeBannerWrapper>
       <HomeContainer>
         <HomeArrowImage src="/icons/arrow.svg" alt="Ícone de flecha" />
-        <HomeGetStatedSection>
+        <HomeSection>
           <HomeHeading textShadow="red">
             VENHA SE JUNTAR A ORDO REALITAS
           </HomeHeading>
@@ -82,7 +83,83 @@ export default function Home(): JSX.Element {
               />
             </HomeSectionImageWrapper>
           </HomeSectionContent>
-        </HomeGetStatedSection>
+        </HomeSection>
+        <HomeAboutSection id="about">
+          <HomeHeading textShadow="blue">SOBRE A ORDO REALITAS</HomeHeading>
+          <HomeSectionContent isCentered>
+            <HomeSectionImageWrapper>
+              <Image
+                src="/images/simbolo.webp"
+                alt="Símbolo de ritual"
+                width={500}
+                height={500}
+                layout="responsive"
+                loading="lazy"
+              />
+            </HomeSectionImageWrapper>
+            <HomeSectionText textAlign="right">
+              <span>
+                Baseado na websérie Ordem Paranormal RPG, criado por Rafael
+                Lange “Cellbit”. Ordo Realitas é o nome da principal equipe que
+                combate os ocultistas e criaturas do universo de ordem
+                paranormal, com o fim da temporada denominada, calamidade, foi
+                lançado o livro de regras oficial do universo de ordem
+                paranormal, e o objetivo deste projeto é dar aos jogadores que
+                tenham o livro de regras um lugar para armazenar seus
+                personagens e demais coisas relacionadas ao universo do rpg, o
+                objetivo é dar a comunidade um gostinho do sistema usado
+                internamente pelos jogares na websérie de ordem paranormal.
+              </span>
+            </HomeSectionText>
+          </HomeSectionContent>
+        </HomeAboutSection>
+        <HomeSection id="goals">
+          <HomeHeading textShadow="yellow">OBJETIVOS DO PROJETO</HomeHeading>
+          <HomeSectionContent isCentered>
+            <HomeSectionText textAlign="left">
+              O objetivo é dar aos jogadores e comunidade um gostinho do sistema
+              utilizado pela equipe de ordem paranormal, se inspirando no design
+              e usuabilidade do sistema. O projeto será aberto à toda a
+              comunidade, sem nenhum tipo de custo, a plataforma se baseia nas
+              regras e sistemas do livro de regras oficial, será feito o mínimo
+              possível de coisas relacionadas as regras gerais do livro, pois o
+              projeto é um lugar para armazenar e manuear as informações dos
+              seus personagens e afins, e não pra quem não tem o livro poder
+              usufruir do rpg.
+            </HomeSectionText>
+            <HomeSectionImageWrapper>
+              <Image
+                src="/images/ordo_calamitas_simbolo.webp"
+                alt="Símbolo de ritual"
+                width={500}
+                height={500}
+                layout="responsive"
+                loading="lazy"
+              />
+            </HomeSectionImageWrapper>
+          </HomeSectionContent>
+          <HomeSectionContent isCentered>
+            <HomeSectionImageWrapper>
+              <Image
+                src="/images/simbolo_energia.webp"
+                alt="Símbolo de ritual"
+                width={500}
+                height={500}
+                layout="responsive"
+                loading="lazy"
+              />
+            </HomeSectionImageWrapper>
+            <HomeSectionText textAlign="right">
+              Tanto jogadores quanto mestres terão seu espaço na plataforma. Os
+              jogadores poderão criar seus personagens e armazenar suas
+              informações como, status, vida, inventário, rituais, entre outras
+              informações importantes e por fim, os jogadores podem vincular
+              seus personagens à mesa do seu mestre. Já os mestres terão um
+              painel de todos os personagens vinculados a sua mesa, podendo
+              alterar e adicionar informações aos personagens vinculados.
+            </HomeSectionText>
+          </HomeSectionContent>
+        </HomeSection>
       </HomeContainer>
     </>
   )

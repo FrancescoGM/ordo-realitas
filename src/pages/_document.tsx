@@ -63,7 +63,7 @@ export default class Document extends NextDocument {
             name="twitter:image"
             content="https://ordo-realitas.com.br/thumbnail.png"
           />
-          <meta name="viewport" content="width=device-width" />
+
           <meta charSet="utf-8" />
           <meta name="next-head-count" content="4" />
         </Head>

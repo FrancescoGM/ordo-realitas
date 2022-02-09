@@ -11,6 +11,7 @@ export const globalCSS = globalCss({
     color: 'white'
   },
   html: {
+    scrollBehavior: 'smooth',
     '@lg': {
       fontSize: '93.75%'
     },
