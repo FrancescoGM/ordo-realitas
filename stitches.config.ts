@@ -12,23 +12,27 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      'primaryColor-light': '#07A6FB',
-      'primaryColor-mid': '#0766D3',
-      'primaryColor-dark': '#003FC2',
+      'primaryColor-light': '#996DFF',
+      'primaryColor-mid': '#633BBC',
+      'primaryColor-dark': '#271A45',
 
-      'secondaryColor-light': '#FF4938',
-      'secondaryColor-mid': '#FF230F',
-      'secondaryColor-dark': '#DC2413',
+      'secondaryColor-light': '#ED8936',
+      'secondaryColor-mid': '#DD6B20',
+      'secondaryColor-dark': '#C05621',
 
       'neutralColor-100': '#F2F2FA',
       'neutralColor-200': '#E1E1E6',
       'neutralColor-300': '#A8A8B3',
+      'neutralColor-400': '#8D8D8C',
+      'neutralColor-500': '#687076',
+      'neutralColor-600': '#454545',
       'neutralColor-700': '#29292E',
       'neutralColor-800': '#202024',
       'neutralColor-900': '#121214',
 
       'semanticColor-positive': '#04D361',
       'semanticColor-negative': '#FF5343',
+      'semanticColor-warning': '#EB8A1D',
 
       black: '#000000',
       white: '#FFFFFF'
@@ -36,6 +40,11 @@ export const {
     fonts: {
       default: '"Roboto", sans-serif',
       highlight: '"Roboto Condensed", sans-serif'
+    },
+    fontWeights: {
+      normal: '400',
+      medium: '500',
+      bold: '700'
     },
     fontSizes: {
       xs: '0.75rem',
@@ -54,13 +63,14 @@ export const {
       taller: '180%'
     },
     radii: {
-      base: '5',
-      pill: '9999'
+      base: '5px',
+      medium: '12px',
+      pill: '99999px'
     },
     borderWidths: {
-      thin: '1',
-      mid: '2',
-      thick: '4'
+      thin: '1px',
+      mid: '2px',
+      thick: '4px'
     },
     shadows: {
       'text-red': '0px 0px 10px #FF230F',

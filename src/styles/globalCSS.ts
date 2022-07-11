@@ -28,6 +28,7 @@ export const globalCSS = globalCss({
   'body, input, textarea, select, button': {
     fontFamily: '$default',
     fontWeight: 'normal',
-    fontSize: '$md'
+    fontSize: '$md',
+    color: '$neutralColor-100'
   }
 })
