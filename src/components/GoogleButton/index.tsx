@@ -2,8 +2,6 @@ import Script from 'next/script'
 import { useCallback, useRef, useState } from 'react'
 import { IoLogoGoogle } from 'react-icons/io5'
 
-import { theme } from '@stitches'
-
 import { useAuth } from '../../hooks/useAuth'
 import { useToast } from '../../hooks/useToast'
 import { Button, ButtonProps } from '../Button'
@@ -70,7 +68,7 @@ export function GoogleButton({ ...rest }: GoogleButtonProps): JSX.Element {
         loading={loading}
         {...rest}
       >
-        <IoLogoGoogle color={theme.colors['primaryColor-mid'].value} />
+        <IoLogoGoogle />
         GOOGLE
       </Button>
     </>

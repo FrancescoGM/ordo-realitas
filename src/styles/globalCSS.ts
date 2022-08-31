@@ -8,7 +8,7 @@ export const globalCSS = globalCss({
   },
   'h1, h2, h3, h4, h5, h6': {
     fontFamily: '$highlight',
-    color: 'white'
+    color: '$mauve12'
   },
   html: {
     scrollBehavior: 'smooth',
@@ -21,14 +21,14 @@ export const globalCSS = globalCss({
     }
   },
   body: {
-    background: '$black',
-    color: '$neutralColor-100',
+    background: '$mauve1',
+    color: '$mauve11',
     fontFamily: '$default'
   },
   'body, input, textarea, select, button': {
     fontFamily: '$default',
     fontWeight: 'normal',
     fontSize: '$md',
-    color: '$neutralColor-100'
+    color: '$mauve12'
   }
 })

@@ -1,13 +1,15 @@
-import { NextApiResponse, NextPageContext } from 'next'
+import { NextApiRequest, NextPageContext } from 'next'
 
-import { Response } from 'express'
+import { Request, Response } from 'express'
 
 export type NookiesContext =
-  | Pick<NextPageContext, 'res'>
+  | NextPageContext
   | {
-      res: NextApiResponse
+      req: NextApiRequest
+      res: Response
     }
   | {
+      req: Request
       res: Response
     }
   | null

@@ -2,17 +2,23 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRef } from 'react'
-import { IoLockClosedOutline, IoMailOutline } from 'react-icons/io5'
+import { IoMailOutline } from 'react-icons/io5'
 
+import { Divider } from '@components/Divider'
+import { Link } from '@components/Link'
+import { UnformPasswordInput } from '@modules/UnformPasswordInput'
+import {
+  SignInContainer,
+  SignInForm,
+  SigninFormDividerContent
+} from '@styles/pages/signin'
 import { FormHandles, SubmitHandler } from '@unform/core'
 import * as yup from 'yup'
 
 import { Button } from '../components/Button'
 import { GoogleButton } from '../components/GoogleButton'
-import { InputGroup, InputLeftIcon } from '../components/Input'
-import { UnformInput } from '../components/Unform/UnformInput'
 import { useAuth } from '../hooks/useAuth'
-import { SignInContainer, SignInForm } from '../styles/pages/SignIn'
+import { UnformInput } from '../modules/UnformInput'
 import { withSSRGuest } from '../utils/withSSRGuest'
 import { yupErrorToUnform } from '../utils/yupErrorToUnform'
 
@@ -51,7 +57,7 @@ export default function SignIn(): JSX.Element {
         <title>Login | Ordo Realitas</title>
       </Head>
       <SignInContainer>
-        <SignInForm ref={formRef} onSubmit={handleSubmit}>
+        <div>
           <Image
             src="/images/ordo_realitas_logo.webp"
             alt="Logo da Ordo Realitas"
@@ -59,28 +65,42 @@ export default function SignIn(): JSX.Element {
             height={135}
             layout="fixed"
           />
-          <h1>Venha se juntar a ordem</h1>
-          <InputGroup>
-            <InputLeftIcon>
-              <IoMailOutline />
-            </InputLeftIcon>
-            <UnformInput name="email" placeholder="E-mail" />
-          </InputGroup>
-          <InputGroup>
-            <InputLeftIcon>
-              <IoLockClosedOutline />
-            </InputLeftIcon>
-            <UnformInput name="password" placeholder="Senha" />
-          </InputGroup>
-          <a>Esqueci minha senha</a>
-          <Button type="submit" full>
-            ENTRAR
-          </Button>
-          <GoogleButton />
-          <span>
-            Não possui uma conta? <a>Cadastre-se</a>
-          </span>
-        </SignInForm>
+          <h1>Junte-se a ordem e combata o outro lado</h1>
+
+          <SignInForm ref={formRef} onSubmit={handleSubmit}>
+            <UnformInput
+              name="email"
+              label="E-mail"
+              placeholder="Insira seu e-mail"
+              leftIcon={<IoMailOutline />}
+            />
+
+            <UnformPasswordInput
+              name="password"
+              label="Senha"
+              placeholder="Senha"
+            />
+
+            <Link href="/forgot" colorScheme="grayLight">
+              Esqueci minha senha
+            </Link>
+            <Button type="submit" full>
+              ENTRAR
+            </Button>
+            <SigninFormDividerContent>
+              <Divider />
+              ou
+              <Divider />
+            </SigninFormDividerContent>
+            <GoogleButton />
+            <span>
+              Não possui uma conta?{' '}
+              <Link href="/signup" colorScheme="grayLight">
+                Cadastre-se
+              </Link>
+            </span>
+          </SignInForm>
+        </div>
       </SignInContainer>
     </>
   )

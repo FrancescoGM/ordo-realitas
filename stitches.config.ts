@@ -1,3 +1,15 @@
+import {
+  violet,
+  mauve,
+  grass,
+  tomato,
+  amber,
+  mauveDark,
+  grassDark,
+  violetDark,
+  tomatoDark,
+  amberDark
+} from '@radix-ui/colors'
 import { createStitches } from '@stitches/react'
 
 export const {
@@ -12,30 +24,14 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      'primaryColor-light': '#996DFF',
-      'primaryColor-mid': '#633BBC',
-      'primaryColor-dark': '#271A45',
-
-      'secondaryColor-light': '#ED8936',
-      'secondaryColor-mid': '#DD6B20',
-      'secondaryColor-dark': '#C05621',
-
-      'neutralColor-100': '#F2F2FA',
-      'neutralColor-200': '#E1E1E6',
-      'neutralColor-300': '#A8A8B3',
-      'neutralColor-400': '#8D8D8C',
-      'neutralColor-500': '#687076',
-      'neutralColor-600': '#454545',
-      'neutralColor-700': '#29292E',
-      'neutralColor-800': '#202024',
-      'neutralColor-900': '#121214',
-
-      'semanticColor-positive': '#04D361',
-      'semanticColor-negative': '#FF5343',
-      'semanticColor-warning': '#EB8A1D',
-
-      black: '#000000',
-      white: '#FFFFFF'
+      ...violet,
+      ...grass,
+      ...mauve,
+      ...tomato,
+      ...amber
+    },
+    shadows: {
+      outlined: '0 0 0 4px $colors$mauve1, 0 0 0 6px $colors$mauve12'
     },
     fonts: {
       default: '"Roboto", sans-serif',
@@ -72,14 +68,6 @@ export const {
       mid: '2px',
       thick: '4px'
     },
-    shadows: {
-      'text-red': '0px 0px 10px #FF230F',
-      'text-blue': '0px 0px 10px #0766D3',
-      'text-yellow': '0px 0px 10px #FFBC4F',
-      red: '0px 10px 10px #FF230F',
-      blue: '0px 0px 10px 10px #0766D3',
-      yellow: '0px 0px 10px 10px #FFBC4F'
-    },
     space: {
       '0': '0rem',
       '1': '0.25rem',
@@ -104,5 +92,20 @@ export const {
     md: '(max-width: 38em)',
     lg: '(max-width: 62em)',
     xl: '(max-width: 80em)'
+  }
+})
+
+export const darkTheme = createTheme({
+  colors: {
+    ...mauveDark,
+    ...grassDark,
+    ...violetDark,
+    ...tomatoDark,
+    ...amberDark
+  },
+  shadows: {
+    $$mauve1: '$colors$mauve1',
+    $$mauve12: '$colors$mauve12',
+    outlined: '0 0 0 4px $colors$mauve1, 0 0 0 6px $colors$mauve12'
   }
 })

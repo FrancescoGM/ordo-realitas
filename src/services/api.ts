@@ -1,8 +1,8 @@
+import { NookiesContext } from '@interfaces/Nookies'
 import axios, { AxiosError, AxiosInstance } from 'axios'
 import { parseCookies } from 'nookies'
 
 import { setCookies, signOut } from '../contexts/AuthContext'
-import { NextSSRContext } from '../types/NextSSRContext'
 import { AuthTokenError } from './errors/AuthTokenError'
 
 type FailedRequest = {
@@ -14,7 +14,7 @@ let cookies = parseCookies()
 let isRefreshing = false
 let failedRequestQueue: FailedRequest[] = []
 
-export function setupAPI(ctx: NextSSRContext = undefined): AxiosInstance {
+export function setupAPI(ctx: NookiesContext = undefined): AxiosInstance {
   const isBrowser = typeof window !== 'undefined'
   cookies = parseCookies(ctx)
 

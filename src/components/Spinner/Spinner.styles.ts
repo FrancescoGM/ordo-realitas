@@ -14,8 +14,8 @@ export const SpinnerWrapper = styled('div', {
 
   borderStyle: 'solid',
   borderWidth: '$mid',
-  borderTopColor: '$neutralColor-100',
-  borderRightColor: '$neutralColor-100',
+  borderTopColor: '$mauve12',
+  borderRightColor: '$mauve12',
   borderBottomColor: 'transparent',
   borderLeftColor: 'transparent',
 

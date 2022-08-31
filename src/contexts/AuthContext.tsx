@@ -104,9 +104,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
     if (refresh_token) {
       api
         .get<Pick<UserResponse, 'user'>>('/sessions/refresh/user')
-        .then(({ data }) => {
-          setUser(data.user)
-        })
+        .then(({ data }) => setUser(data.user))
         .catch(() => {
           signOut(undefined)
           Router.push('/dashboard')
@@ -141,7 +139,8 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
           toast({
             title: 'Falha no login',
             description:
-              error.response?.data.error || 'Não foi possível realizar o login'
+              error.response?.data.error || 'Não foi possível realizar o login',
+            status: 'error'
           })
         } else {
           return Promise.reject(error)

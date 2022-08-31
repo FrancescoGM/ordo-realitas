@@ -11,17 +11,18 @@ export const ButtonRoot = styled('button', {
   gap: '$4',
   padding: '$2 $4',
 
-  borderWidth: '$mid',
-  borderStyle: 'solid',
-
   fontSize: '$xl',
   fontWeight: '$bold',
-  color: '$white',
+  color: '$mauve12',
   lineHeight: '$shorter',
 
   cursor: 'pointer',
-  outline: 'none',
-  transition: 'background 0.3s, border-color 0.3s',
+  outline: '0px',
+  transition: 'background 0.3s, border-color 0.3s, box-shadow 0.3s',
+
+  '&:focus-visible:not(:disabled)': {
+    boxShadow: '$outlined'
+  },
 
   defaultVariants: {
     blocked: false,
@@ -36,12 +37,12 @@ export const ButtonRoot = styled('button', {
       variant: 'primary',
       outlined: true,
       css: {
+        borderColor: '$violet9',
         backgroundColor: 'transparent',
-        borderColor: '$primaryColor-mid',
 
         '&:hover:not(:disabled)': {
-          borderColor: '$primaryColor-dark',
-          backgroundColor: '$primaryColor-dark'
+          borderColor: '$violet8',
+          backgroundColor: '$violet8'
         }
       }
     },
@@ -49,12 +50,12 @@ export const ButtonRoot = styled('button', {
       variant: 'secondary',
       outlined: true,
       css: {
+        borderColor: '$grass9',
         backgroundColor: 'transparent',
-        borderColor: '$secondaryColor-mid',
 
         '&:hover:not(:disabled)': {
-          borderColor: '$secondaryColor-dark',
-          backgroundColor: '$secondaryColor-dark'
+          borderColor: '$grass8',
+          backgroundColor: '$grass8'
         }
       }
     },
@@ -62,7 +63,14 @@ export const ButtonRoot = styled('button', {
       variant: 'tertiary',
       outlined: true,
       css: {
-        borderColor: '$primaryColor-mid'
+        border: 'none'
+      }
+    },
+    {
+      variant: 'danger',
+      outlined: true,
+      css: {
+        border: 'none'
       }
     }
   ],
@@ -117,51 +125,51 @@ export const ButtonRoot = styled('button', {
     },
     variant: {
       primary: {
-        backgroundColor: '$primaryColor-mid',
-        borderColor: '$primaryColor-mid',
+        backgroundColor: '$violet9',
 
-        '&:focus:not(:disabled)': {
-          borderColor: '$primaryColor-light'
+        svg: {
+          color: '$mauve1'
         },
 
         '&:hover:not(:disabled)': {
-          borderColor: '$primaryColor-dark',
-          backgroundColor: '$primaryColor-dark'
+          backgroundColor: '$violet8'
         }
       },
       secondary: {
-        backgroundColor: '$secondaryColor-mid',
-        borderColor: '$secondaryColor-mid',
+        backgroundColor: '$grass9',
 
-        '&:focus:not(:disabled)': {
-          borderColor: '$secondaryColor-light'
+        svg: {
+          color: '$mauve1'
         },
 
         '&:hover:not(:disabled)': {
-          borderColor: '$secondaryColor-dark',
-          backgroundColor: '$secondaryColor-dark'
+          backgroundColor: '$grass8'
         }
       },
       tertiary: {
-        border: 'none',
-        backgroundColor: '$neutralColor-900',
+        backgroundColor: 'transparent',
 
-        '&:is(:hover, :focus):not(:disabled)': {
-          backgroundColor: `$neutralColor-800`
+        svg: {
+          color: '$violet9'
+        },
+
+        '&:hover:not(:disabled)': {
+          backgroundColor: `$mauve2`
         }
       },
       danger: {
-        border: 'none',
-        color: '$semanticColor-negative',
-        backgroundColor: '$neutralColor-900',
+        color: '$tomato9',
+        backgroundColor: 'transparent',
 
-        '&:is(:hover, :focus):not(:disabled)': {
-          backgroundColor: `$neutralColor-800`
+        '&:hover:not(:disabled)': {
+          backgroundColor: `$mauve2`
         }
       }
     },
     outlined: {
       true: {
+        borderWidth: '$mid',
+        borderStyle: 'solid',
         backgroundColor: 'transparent'
       }
     }

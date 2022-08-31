@@ -22,7 +22,7 @@ export const ToastRoot = styled(Root, {
   maxWidth: '400px',
   padding: '$3 $4',
   borderRadius: '$base',
-  background: '$white',
+  background: '$mauve12',
 
   display: 'grid',
   gap: '$2 $4',
@@ -32,16 +32,16 @@ export const ToastRoot = styled(Root, {
   variants: {
     status: {
       success: {
-        background: '$semanticColor-positive'
+        backgroundColor: '$grass9'
       },
       error: {
-        background: '$semanticColor-negative'
+        backgroundColor: '$tomato9'
       },
       warning: {
-        background: '$semanticColor-warning'
+        backgroundColor: '$amber9'
       },
       info: {
-        background: '$white'
+        backgroundColor: '$mauve12'
       }
     }
   },
@@ -66,23 +66,22 @@ export const ToastRoot = styled(Root, {
   }
 })
 export const ToastTitle = styled(Title, {
-  color: '$neutralColor-900',
   fontWeight: '$medium',
   gridArea: 'title',
 
   variants: {
     status: {
       success: {
-        color: '$white'
+        color: '$mauve12'
       },
       error: {
-        color: '$white'
+        color: '$mauve12'
       },
       warning: {
-        color: '$white'
+        color: '$mauve12'
       },
       info: {
-        color: '$neutralColor-900'
+        color: '$mauve1'
       }
     }
   }
@@ -95,16 +94,16 @@ export const ToastDescription = styled(Description, {
   variants: {
     status: {
       success: {
-        color: '$neutralColor-200'
+        color: '$mauve12'
       },
       error: {
-        color: '$neutralColor-200'
+        color: '$mauve12'
       },
       warning: {
-        color: '$neutralColor-200'
+        color: '$mauve12'
       },
       info: {
-        color: '$neutralColor-500'
+        color: '$mauve2'
       }
     }
   }
@@ -122,6 +121,13 @@ export const ToastClose = styled(Close, {
   justifyContent: 'center',
 
   cursor: 'pointer',
+  outline: '0px',
+
+  transition: 'background-color 0.3s, filter 0.3s, box-shadow 0.3s',
+
+  '&:focus-visible:not(:disabled)': {
+    boxShadow: '$outlined'
+  },
 
   svg: {
     width: '20px',
@@ -131,35 +137,35 @@ export const ToastClose = styled(Close, {
   variants: {
     status: {
       success: {
-        color: '$white',
-        backgroundColor: '$semanticColor-positive',
-        transition: 'filter 0.3s',
+        color: '$mauve12',
+        backgroundColor: '$green9',
+
         '&:hover': {
           filter: 'brightness(0.8)'
         }
       },
       error: {
-        color: '$white',
-        backgroundColor: '$semanticColor-negative',
-        transition: 'filter 0.3s',
+        color: '$mauve12',
+        backgroundColor: '$tomato9',
+
         '&:hover': {
           filter: 'brightness(0.8)'
         }
       },
       warning: {
-        color: '$white',
-        backgroundColor: '$semanticColor-warning',
-        transition: 'filter 0.3s',
+        color: '$mauve12',
+        backgroundColor: '$amber9',
+
         '&:hover': {
           filter: 'brightness(0.8)'
         }
       },
       info: {
-        color: '$neutralColor-900',
-        backgroundColor: '$white',
-        transition: 'background-color 0.3s',
+        color: '$mauve1',
+        backgroundColor: '$mauve1',
+
         '&:hover': {
-          backgroundColor: '$neutralColor-200'
+          backgroundColor: '$mauve2'
         }
       }
     }
