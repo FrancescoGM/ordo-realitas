@@ -2,10 +2,10 @@ import { Form } from '@unform/web'
 
 import { styled } from '../../../stitches.config'
 
-export const SignInContainer = styled('main', {
+export const SignInRoot = styled('main', {
   width: '100%',
-  height: '100vh',
-  paddingInline: '$4',
+  minHeight: '100vh',
+  padding: '$4',
 
   display: 'flex',
   flexDirection: 'column',
@@ -14,20 +14,20 @@ export const SignInContainer = styled('main', {
 
   '@sm': {
     paddingInline: '0'
-  },
+  }
+})
 
-  '> div': {
-    width: '100%',
-    maxWidth: '600px',
-    padding: '$8',
-    textAlign: 'center',
+export const SignInContent = styled('div', {
+  width: '100%',
+  maxWidth: '440px',
+  padding: '$8',
+  textAlign: 'center',
 
-    borderRadius: '$medium',
-    backgroundColor: '$mauve2',
+  borderRadius: '$medium',
+  backgroundColor: '$mauve2',
 
-    '@sm': {
-      backgroundColor: 'transparent'
-    }
+  '@sm': {
+    backgroundColor: 'transparent'
   }
 })
 

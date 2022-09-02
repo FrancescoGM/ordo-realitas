@@ -1,7 +1,7 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
-import { getCssText } from '../../stitches.config'
-import { globalCSS } from '../styles/globalCSS'
+import { getCssText } from '@stitches'
+import { globalCSS } from '@styles/globalCSS'
 
 export default class Document extends NextDocument {
   render(): JSX.Element {

@@ -2,9 +2,9 @@ import Script from 'next/script'
 import { useCallback, useRef, useState } from 'react'
 import { IoLogoGoogle } from 'react-icons/io5'
 
-import { useAuth } from '../../hooks/useAuth'
-import { useToast } from '../../hooks/useToast'
-import { Button, ButtonProps } from '../Button'
+import { Button, ButtonProps } from '@components/Button'
+import { useAuth } from '@hooks/useAuth'
+import { useToast } from '@hooks/useToast'
 
 type GoogleButtonProps = Omit<ButtonProps, 'onClick' | 'children'>
 

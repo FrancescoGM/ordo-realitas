@@ -4,23 +4,23 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import { IoMailOutline } from 'react-icons/io5'
 
+import { Button } from '@components/Button'
 import { Divider } from '@components/Divider'
 import { Link } from '@components/Link'
+import { useAuth } from '@hooks/useAuth'
+import { GoogleButton } from '@modules/GoogleButton'
+import { UnformInput } from '@modules/UnformInput'
 import { UnformPasswordInput } from '@modules/UnformPasswordInput'
 import {
-  SignInContainer,
+  SignInRoot,
+  SignInContent,
   SignInForm,
   SigninFormDividerContent
 } from '@styles/pages/signin'
 import { FormHandles, SubmitHandler } from '@unform/core'
+import { withSSRGuest } from '@utils/withSSRGuest'
+import { yupErrorToUnform } from '@utils/yupErrorToUnform'
 import * as yup from 'yup'
-
-import { Button } from '../components/Button'
-import { GoogleButton } from '../components/GoogleButton'
-import { useAuth } from '../hooks/useAuth'
-import { UnformInput } from '../modules/UnformInput'
-import { withSSRGuest } from '../utils/withSSRGuest'
-import { yupErrorToUnform } from '../utils/yupErrorToUnform'
 
 type FormData = {
   email: string
@@ -56,8 +56,8 @@ export default function SignIn(): JSX.Element {
       <Head>
         <title>Login | Ordo Realitas</title>
       </Head>
-      <SignInContainer>
-        <div>
+      <SignInRoot>
+        <SignInContent>
           <Image
             src="/images/ordo_realitas_logo.webp"
             alt="Logo da Ordo Realitas"
@@ -100,8 +100,8 @@ export default function SignIn(): JSX.Element {
               </Link>
             </span>
           </SignInForm>
-        </div>
-      </SignInContainer>
+        </SignInContent>
+      </SignInRoot>
     </>
   )
 }

@@ -18,7 +18,8 @@ export const IconButtonRoot = styled('button', {
 
   cursor: 'pointer',
   outline: '0px',
-  transition: 'background 0.3s, border-color 0.3s, box-shadow 0.3s',
+  transition:
+    'background 0.3s, border-color 0.3s, box-shadow 0.3s, filter 0.3s',
 
   '&:focus-visible:not(:disabled)': {
     boxShadow: '$outlined'
@@ -154,7 +155,7 @@ export const IconButtonRoot = styled('button', {
         },
 
         '&:hover:not(:disabled)': {
-          backgroundColor: `$mauve2`
+          filter: 'brightness(0.8)'
         }
       },
       danger: {
@@ -162,7 +163,7 @@ export const IconButtonRoot = styled('button', {
         backgroundColor: 'transparent',
 
         '&:hover:not(:disabled)': {
-          backgroundColor: `$mauve2`
+          filter: 'brightness(0.8)'
         }
       }
     },
