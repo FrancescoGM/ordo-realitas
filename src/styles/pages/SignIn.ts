@@ -13,8 +13,8 @@ export const SignInRoot = styled('main', {
   alignItems: 'center',
 
   '@sm': {
-    paddingInline: '0'
-  }
+    paddingInline: '0',
+  },
 })
 
 export const SignInContent = styled('div', {
@@ -27,8 +27,8 @@ export const SignInContent = styled('div', {
   backgroundColor: '$mauve2',
 
   '@sm': {
-    backgroundColor: 'transparent'
-  }
+    backgroundColor: 'transparent',
+  },
 })
 
 export const SignInForm = styled(Form, {
@@ -42,13 +42,13 @@ export const SignInForm = styled(Form, {
   gap: '$4',
 
   input: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 })
 
 export const SigninFormDividerContent = styled('div', {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
-  gap: '$2'
+  gap: '$2',
 })

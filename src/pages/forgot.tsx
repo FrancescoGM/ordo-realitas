@@ -22,16 +22,16 @@ const formSchema = yup.object().shape({
   email: yup
     .string()
     .email('Esse e-mail é inválido')
-    .required('E-mail é obrigatório')
+    .required('E-mail é obrigatório'),
 })
 
-export default function Forgot(): JSX.Element {
+export default function Forgot() {
   const toast = useToast()
   const formRef = useRef<FormHandles>(null)
   const [loading, setLoading] = useState(false)
 
   const handleSubmit: SubmitHandler<FormData> = useCallback(
-    async data => {
+    async (data) => {
       setLoading(true)
       try {
         await formSchema.validate(data, { abortEarly: false })
@@ -41,7 +41,7 @@ export default function Forgot(): JSX.Element {
           title: 'E-mail enviado',
           description:
             'Um e-mail foi enviado com as instruções para recuperar sua senha',
-          status: 'success'
+          status: 'success',
         })
       } catch (error) {
         if (error instanceof yup.ValidationError) {
@@ -50,20 +50,20 @@ export default function Forgot(): JSX.Element {
           toast({
             title: 'Ocorreu um erro ao tentar recuperar sua senha',
             description: error.response?.data.message,
-            status: 'error'
+            status: 'error',
           })
         } else {
           toast({
             title: 'Ocorreu algo inesperado',
             description: 'Um erro inexplicável ocorreu',
-            status: 'error'
+            status: 'error',
           })
         }
       } finally {
         setLoading(false)
       }
     },
-    [toast]
+    [toast],
   )
   return (
     <>

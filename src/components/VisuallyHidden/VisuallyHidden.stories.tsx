@@ -11,15 +11,15 @@ export default {
     children: {
       control: 'text',
       defaultValue: 'Check icon',
-      description: 'The text to display visually hidden'
-    }
+      description: 'The text to display visually hidden',
+    },
   },
-  component: VisuallyHiddenRoot
+  component: VisuallyHiddenRoot,
 } as ComponentMeta<typeof VisuallyHiddenRoot>
 
-export const VisuallyHidden: ComponentStory<
-  typeof VisuallyHiddenRoot
-> = args => (
+export const VisuallyHidden: ComponentStory<typeof VisuallyHiddenRoot> = (
+  args,
+) => (
   <Button>
     <VisuallyHiddenRoot {...args} />
     <IoCheckmark />

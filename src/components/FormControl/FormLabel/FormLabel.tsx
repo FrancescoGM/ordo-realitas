@@ -13,7 +13,7 @@ export const FormLabel = forwardRef<HTMLLabelElement, FormLabelProps>(
       optionalIndicator = null,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const { isRequired, getLabelProps } = useFormControlContext()
 
@@ -23,7 +23,7 @@ export const FormLabel = forwardRef<HTMLLabelElement, FormLabelProps>(
         {isRequired ? requiredIndicator : optionalIndicator}
       </FormLabelRoot>
     )
-  }
+  },
 )
 
 FormLabel.displayName = 'FormLabel'

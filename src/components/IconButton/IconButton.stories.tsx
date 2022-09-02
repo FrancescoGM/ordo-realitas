@@ -11,8 +11,8 @@ export default {
       defaultValue: false,
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
+        defaultValue: { summary: false },
+      },
     },
     children: {
       control: 'text',
@@ -20,8 +20,8 @@ export default {
       defaultValue: 'LABEL',
       table: {
         type: { summary: null },
-        defaultValue: { summary: null }
-      }
+        defaultValue: { summary: null },
+      },
     },
     'aria-label': {
       control: 'text',
@@ -29,8 +29,8 @@ export default {
       defaultValue: 'icon button',
       table: {
         type: { summary: null },
-        defaultValue: { summary: null }
-      }
+        defaultValue: { summary: null },
+      },
     },
     variant: {
       options: ['primary', 'secondary'],
@@ -39,8 +39,8 @@ export default {
       control: 'inline-radio',
       table: {
         type: { summary: 'primary | secondary' },
-        defaultValue: { summary: 'primary' }
-      }
+        defaultValue: { summary: 'primary' },
+      },
     },
 
     size: {
@@ -51,8 +51,8 @@ export default {
       control: 'inline-radio',
       table: {
         type: { summary: 'sm | md | lg | xl' },
-        defaultValue: { summary: 'md' }
-      }
+        defaultValue: { summary: 'md' },
+      },
     },
     loading: {
       control: 'boolean',
@@ -60,8 +60,8 @@ export default {
       defaultValue: false,
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
+        defaultValue: { summary: false },
+      },
     },
     full: {
       control: 'boolean',
@@ -69,20 +69,20 @@ export default {
       defaultValue: false,
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
-    }
+        defaultValue: { summary: false },
+      },
+    },
   },
-  component: IconButton
+  component: IconButton,
 } as ComponentMeta<typeof IconButton>
 
-export const Primary: ComponentStory<typeof IconButton> = args => (
+export const Primary: ComponentStory<typeof IconButton> = (args) => (
   <IconButton variant="primary" {...args}>
     {args.children}
   </IconButton>
 )
 
-export const Secondary: ComponentStory<typeof IconButton> = args => (
+export const Secondary: ComponentStory<typeof IconButton> = (args) => (
   <IconButton variant="secondary" {...args}>
     {args.children}
   </IconButton>
@@ -90,6 +90,6 @@ export const Secondary: ComponentStory<typeof IconButton> = args => (
 
 Secondary.argTypes = {
   variant: {
-    defaultValue: 'secondary'
-  }
+    defaultValue: 'secondary',
+  },
 }

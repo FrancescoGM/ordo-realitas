@@ -1,10 +1,8 @@
-import { useRef } from 'react'
-import { useState } from 'react'
-import { useCallback } from 'react'
+import { useRef, useState, useCallback } from 'react'
 import {
   IoEyeOffOutline,
   IoEyeOutline,
-  IoLockClosedOutline
+  IoLockClosedOutline,
 } from 'react-icons/io5'
 
 import { IconButton } from '@components/IconButton'
@@ -12,14 +10,12 @@ import { UnformInput } from '@modules/UnformInput'
 
 import { UnformPasswordInputProps } from './UnformPasswordInput.types'
 
-export function UnformPasswordInput({
-  ...rest
-}: UnformPasswordInputProps): JSX.Element {
+export function UnformPasswordInput({ ...rest }: UnformPasswordInputProps) {
   const [visible, setVisible] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
   const toggle = useCallback(() => {
-    setVisible(_visible => !_visible)
+    setVisible((_visible) => !_visible)
     inputRef.current?.focus()
   }, [])
 

@@ -4,17 +4,17 @@ import { styled, keyframes } from '../../../stitches.config'
 
 const slideRight = keyframes({
   from: { transform: 'translateX(var(--radix-toast-swipe-end-x))' },
-  to: { transform: 'translateX(100%)' }
+  to: { transform: 'translateX(100%)' },
 })
 
 const fadeIn = keyframes({
   from: { opacity: 0 },
-  to: { opacity: 1 }
+  to: { opacity: 1 },
 })
 
 const fadeOut = keyframes({
   from: { opacity: 1 },
-  to: { opacity: 0 }
+  to: { opacity: 0 },
 })
 
 export const ToastRoot = styled(Root, {
@@ -32,38 +32,38 @@ export const ToastRoot = styled(Root, {
   variants: {
     status: {
       success: {
-        backgroundColor: '$grass9'
+        backgroundColor: '$grass9',
       },
       error: {
-        backgroundColor: '$tomato9'
+        backgroundColor: '$tomato9',
       },
       warning: {
-        backgroundColor: '$amber9'
+        backgroundColor: '$amber9',
       },
       info: {
-        backgroundColor: '$mauve12'
-      }
-    }
+        backgroundColor: '$mauve12',
+      },
+    },
   },
 
   '@media (prefers-reduced-motion: no-preference)': {
     '&[data-state="open"]': {
-      animation: `${fadeIn} 150ms ease-out`
+      animation: `${fadeIn} 150ms ease-out`,
     },
     '&[data-state="closed"]': {
-      animation: `${fadeOut} 100ms ease-out forwards`
+      animation: `${fadeOut} 100ms ease-out forwards`,
     },
     '&[data-swipe="move"]': {
-      transform: 'translateX(var(--radix-toast-swipe-move-x))'
+      transform: 'translateX(var(--radix-toast-swipe-move-x))',
     },
     '&[data-swipe="cancel"]': {
       transform: 'translateX(0)',
-      transition: 'transform 200ms ease-out'
+      transition: 'transform 200ms ease-out',
     },
     '&[data-swipe="end"]': {
-      animation: `${slideRight} 100ms ease-out forwards`
-    }
-  }
+      animation: `${slideRight} 100ms ease-out forwards`,
+    },
+  },
 })
 export const ToastTitle = styled(Title, {
   fontWeight: '$medium',
@@ -72,19 +72,19 @@ export const ToastTitle = styled(Title, {
   variants: {
     status: {
       success: {
-        color: '$mauve12'
+        color: '$mauve12',
       },
       error: {
-        color: '$mauve12'
+        color: '$mauve12',
       },
       warning: {
-        color: '$mauve12'
+        color: '$mauve12',
       },
       info: {
-        color: '$mauve1'
-      }
-    }
-  }
+        color: '$mauve1',
+      },
+    },
+  },
 })
 
 export const ToastDescription = styled(Description, {
@@ -94,19 +94,19 @@ export const ToastDescription = styled(Description, {
   variants: {
     status: {
       success: {
-        color: '$mauve12'
+        color: '$mauve12',
       },
       error: {
-        color: '$mauve12'
+        color: '$mauve12',
       },
       warning: {
-        color: '$mauve12'
+        color: '$mauve12',
       },
       info: {
-        color: '$mauve2'
-      }
-    }
-  }
+        color: '$mauve2',
+      },
+    },
+  },
 })
 export const ToastClose = styled(Close, {
   gridArea: 'close',
@@ -126,12 +126,12 @@ export const ToastClose = styled(Close, {
   transition: 'background-color 0.3s, filter 0.3s, box-shadow 0.3s',
 
   '&:focus-visible:not(:disabled)': {
-    boxShadow: '$outlined'
+    boxShadow: '$outlined',
   },
 
   svg: {
     width: '20px',
-    height: '20px'
+    height: '20px',
   },
 
   variants: {
@@ -141,33 +141,33 @@ export const ToastClose = styled(Close, {
         backgroundColor: '$green9',
 
         '&:hover': {
-          filter: 'brightness(0.8)'
-        }
+          filter: 'brightness(0.8)',
+        },
       },
       error: {
         color: '$mauve12',
         backgroundColor: '$tomato9',
 
         '&:hover': {
-          filter: 'brightness(0.8)'
-        }
+          filter: 'brightness(0.8)',
+        },
       },
       warning: {
         color: '$mauve12',
         backgroundColor: '$amber9',
 
         '&:hover': {
-          filter: 'brightness(0.8)'
-        }
+          filter: 'brightness(0.8)',
+        },
       },
       info: {
         color: '$mauve1',
         backgroundColor: '$mauve1',
 
         '&:hover': {
-          backgroundColor: '$mauve2'
-        }
-      }
-    }
-  }
+          backgroundColor: '$mauve2',
+        },
+      },
+    },
+  },
 })

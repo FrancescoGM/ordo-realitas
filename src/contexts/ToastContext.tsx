@@ -4,7 +4,7 @@ import {
   useCallback,
   useEffect,
   useRef,
-  useState
+  useState,
 } from 'react'
 
 import { Provider, Viewport } from '@radix-ui/react-toast'
@@ -23,7 +23,7 @@ export type ToastContextData = {
 }
 
 export const ToastContext = createContext<ToastContextData>(
-  {} as ToastContextData
+  {} as ToastContextData,
 )
 
 type ToastProviderProps = {
@@ -33,11 +33,11 @@ type ToastProviderProps = {
 const TOAST_DURATION_IN_MILLISECONDS = 1000 * 3
 const FADE_EFFECT_DURATION_IN_MILLISECONDS = 100
 
-export function ToastProvider({ children }: ToastProviderProps): JSX.Element {
+export function ToastProvider({ children }: ToastProviderProps) {
   const [toast, setToast] = useState<QueueToast | null>(null)
   const [open, setOpen] = useState(false)
-  const timerRef = useRef<NodeJS.Timeout>(
-    setTimeout(() => undefined, TOAST_DURATION_IN_MILLISECONDS)
+  const timerRef = useRef(
+    setTimeout(() => undefined, TOAST_DURATION_IN_MILLISECONDS),
   )
 
   useEffect(() => {
@@ -83,6 +83,6 @@ const ToastViewport = styled(Viewport, {
   alignItems: 'flex-end',
 
   '@md': {
-    padding: '$4'
-  }
+    padding: '$4',
+  },
 })

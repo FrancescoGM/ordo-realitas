@@ -4,7 +4,7 @@ import { getCssText } from '@stitches'
 import { globalCSS } from '@styles/globalCSS'
 
 export default class Document extends NextDocument {
-  render(): JSX.Element {
+  render() {
     globalCSS()
 
     return (

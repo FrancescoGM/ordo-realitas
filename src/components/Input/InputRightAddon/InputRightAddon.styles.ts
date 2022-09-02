@@ -14,6 +14,6 @@ export const InputRightAddonRoot = styled('span', {
 
   svg: {
     fontSize: '22px',
-    color: '$mauve11'
-  }
+    color: '$mauve11',
+  },
 })

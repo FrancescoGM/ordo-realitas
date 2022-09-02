@@ -7,15 +7,17 @@ import { useAuth } from '@hooks/useAuth'
 import { useToast } from '@hooks/useToast'
 
 type GoogleButtonProps = Omit<ButtonProps, 'onClick' | 'children'>
+/* global gapi */
+type GoogleUser = gapi.auth2.GoogleUser
 
-export function GoogleButton({ ...rest }: GoogleButtonProps): JSX.Element {
+export function GoogleButton({ ...rest }: GoogleButtonProps) {
   const [loading, setLoading] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const { onSignInWithGoogle } = useAuth()
   const toast = useToast()
 
   const handleSuccess = useCallback(
-    async (googleUser: gapi.auth2.GoogleUser) => {
+    async (googleUser: GoogleUser) => {
       try {
         const { id_token } = googleUser.getAuthResponse()
 
@@ -24,7 +26,7 @@ export function GoogleButton({ ...rest }: GoogleButtonProps): JSX.Element {
         setLoading(false)
       }
     },
-    [onSignInWithGoogle]
+    [onSignInWithGoogle],
   )
 
   const handleFailure = useCallback(() => {
@@ -32,7 +34,7 @@ export function GoogleButton({ ...rest }: GoogleButtonProps): JSX.Element {
     toast({
       title: 'Falha no login com Google',
       description: 'Ocorreu um erro ao se comunicar com o Google',
-      status: 'error'
+      status: 'error',
     })
   }, [toast])
 
@@ -40,14 +42,14 @@ export function GoogleButton({ ...rest }: GoogleButtonProps): JSX.Element {
     window.gapi.load('auth2', async () => {
       const client = await window.gapi.auth2.init({
         client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
-        cookie_policy: 'single_host_origin'
+        cookie_policy: 'single_host_origin',
       })
 
       await client.attachClickHandler(
         buttonRef.current,
         {},
         handleSuccess,
-        handleFailure
+        handleFailure,
       )
     })
   }, [handleFailure, handleSuccess])

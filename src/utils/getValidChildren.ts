@@ -9,7 +9,7 @@ type ValidChildren = ReactElement & {
 }
 
 export function getValidChildren(children: ReactNode): ValidChildren[] {
-  return Children.toArray(children).filter(child =>
-    isValidElement(child)
+  return Children.toArray(children).filter((child) =>
+    isValidElement(child),
   ) as unknown as ValidChildren[]
 }

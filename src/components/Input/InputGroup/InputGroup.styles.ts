@@ -8,16 +8,16 @@ export const InputGroupRoot = styled('div', {
     leftIcon: {
       true: {
         input: {
-          paddingLeft: '$10'
-        }
-      }
+          paddingLeft: '$10',
+        },
+      },
     },
     rightIcon: {
       true: {
         input: {
-          paddingRight: '$10'
-        }
-      }
-    }
-  }
+          paddingRight: '$10',
+        },
+      },
+    },
+  },
 })

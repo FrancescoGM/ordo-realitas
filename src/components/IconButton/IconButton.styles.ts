@@ -22,7 +22,7 @@ export const IconButtonRoot = styled('button', {
     'background 0.3s, border-color 0.3s, box-shadow 0.3s, filter 0.3s',
 
   '&:focus-visible:not(:disabled)': {
-    boxShadow: '$outlined'
+    boxShadow: '$outlined',
   },
 
   defaultVariants: {
@@ -30,7 +30,7 @@ export const IconButtonRoot = styled('button', {
     full: false,
     outlined: false,
     size: 'md',
-    variant: 'primary'
+    variant: 'primary',
   },
 
   compoundVariants: [
@@ -43,9 +43,9 @@ export const IconButtonRoot = styled('button', {
 
         '&:hover:not(:disabled)': {
           borderColor: '$violet8',
-          backgroundColor: '$violet8'
-        }
-      }
+          backgroundColor: '$violet8',
+        },
+      },
     },
     {
       variant: 'secondary',
@@ -56,42 +56,42 @@ export const IconButtonRoot = styled('button', {
 
         '&:hover:not(:disabled)': {
           borderColor: '$grass8',
-          backgroundColor: '$grass8'
-        }
-      }
+          backgroundColor: '$grass8',
+        },
+      },
     },
     {
       variant: 'tertiary',
       outlined: true,
       css: {
-        border: 'none'
-      }
+        border: 'none',
+      },
     },
     {
       variant: 'danger',
       outlined: true,
       css: {
-        border: 'none'
-      }
-    }
+        border: 'none',
+      },
+    },
   ],
 
   variants: {
     loading: {
       true: {
-        cursor: 'wait'
-      }
+        cursor: 'wait',
+      },
     },
     full: {
       true: {
-        width: '100%'
-      }
+        width: '100%',
+      },
     },
     blocked: {
       true: {
         filter: 'brightness(0.5)',
-        cursor: 'not-allowed'
-      }
+        cursor: 'not-allowed',
+      },
     },
     size: {
       sm: {
@@ -99,82 +99,82 @@ export const IconButtonRoot = styled('button', {
         padding: '$2',
 
         svg: {
-          fontSize: 'calc($sm + 1px)'
-        }
+          fontSize: 'calc($sm + 1px)',
+        },
       },
       md: {
         fontSize: '$md',
         padding: '$2',
         svg: {
-          fontSize: 'calc($md + 1px)'
-        }
+          fontSize: 'calc($md + 1px)',
+        },
       },
       lg: {
         fontSize: '$lg',
         padding: '$3',
         svg: {
-          fontSize: 'calc($lg + 1px)'
-        }
+          fontSize: 'calc($lg + 1px)',
+        },
       },
       xl: {
         fontSize: '$xl',
         padding: '$3',
         svg: {
-          fontSize: 'calc($xl + 1px)'
-        }
-      }
+          fontSize: 'calc($xl + 1px)',
+        },
+      },
     },
     variant: {
       primary: {
         backgroundColor: '$violet9',
 
         svg: {
-          color: '$mauve1'
+          color: '$mauve1',
         },
 
         '&:hover:not(:disabled)': {
-          backgroundColor: '$violet8'
-        }
+          backgroundColor: '$violet8',
+        },
       },
       secondary: {
         backgroundColor: '$grass9',
 
         svg: {
-          color: '$mauve1'
+          color: '$mauve1',
         },
 
         '&:hover:not(:disabled)': {
-          backgroundColor: '$grass8'
-        }
+          backgroundColor: '$grass8',
+        },
       },
       tertiary: {
         backgroundColor: 'transparent',
 
         svg: {
-          color: '$violet9'
+          color: '$violet9',
         },
 
         '&:hover:not(:disabled)': {
-          filter: 'brightness(0.8)'
-        }
+          filter: 'brightness(0.8)',
+        },
       },
       danger: {
         color: '$tomato9',
         backgroundColor: 'transparent',
 
         '&:hover:not(:disabled)': {
-          filter: 'brightness(0.8)'
-        }
-      }
+          filter: 'brightness(0.8)',
+        },
+      },
     },
     outlined: {
       true: {
         borderWidth: '$mid',
         borderStyle: 'solid',
-        backgroundColor: 'transparent'
-      }
-    }
-  }
+        backgroundColor: 'transparent',
+      },
+    },
+  },
 })
 
 export const IconButtonTextContainer = styled('span', {
@@ -186,10 +186,10 @@ export const IconButtonTextContainer = styled('span', {
   variants: {
     loading: {
       true: {
-        visibility: 'hidden'
-      }
-    }
-  }
+        visibility: 'hidden',
+      },
+    },
+  },
 })
 
 export const IconButtonLoadingContainer = styled('span', {
@@ -201,5 +201,5 @@ export const IconButtonLoadingContainer = styled('span', {
   alignItems: 'center',
   justifyContent: 'center',
   width: '100%',
-  height: '100%'
+  height: '100%',
 })

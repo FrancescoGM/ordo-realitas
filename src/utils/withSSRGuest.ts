@@ -1,20 +1,20 @@
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
-  GetServerSidePropsResult
+  GetServerSidePropsResult,
 } from 'next'
 
 import { parseCookies } from 'nookies'
 
 function emptyFunction<P>(): GetServerSidePropsResult<P> {
   return {
-    props: {} as P
+    props: {} as P,
   }
 }
 
 export function withSSRGuest<P = unknown>(fn?: GetServerSideProps<P>) {
   return async (
-    ctx: GetServerSidePropsContext
+    ctx: GetServerSidePropsContext,
   ): Promise<GetServerSidePropsResult<P>> => {
     const cookies = parseCookies(ctx)
 
@@ -22,8 +22,8 @@ export function withSSRGuest<P = unknown>(fn?: GetServerSideProps<P>) {
       return {
         redirect: {
           destination: '/dashboard',
-          permanent: false
-        }
+          permanent: false,
+        },
       }
     }
 

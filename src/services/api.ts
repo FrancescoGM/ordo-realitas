@@ -21,12 +21,12 @@ export function setupAPI(ctx: NookiesContext = undefined): AxiosInstance {
   const api = axios.create({
     baseURL: process.env.NEXT_PUBLIC_BACKEND_BASE_URL,
     headers: {
-      'x-access-token': `Bearer ${cookies['@ordo_realitas:x-access-token']}`
-    }
+      'x-access-token': `Bearer ${cookies['@ordo_realitas:x-access-token']}`,
+    },
   })
 
   api.interceptors.response.use(
-    response => {
+    (response) => {
       return response
     },
     (error: AxiosError) => {
@@ -49,11 +49,15 @@ export function setupAPI(ctx: NookiesContext = undefined): AxiosInstance {
                 const { token } = data
                 setCookies(ctx, { token })
 
-                failedRequestQueue.forEach(request => request.onSuccess(token))
+                failedRequestQueue.forEach((request) =>
+                  request.onSuccess(token),
+                )
                 failedRequestQueue = []
               })
-              .catch(error => {
-                failedRequestQueue.forEach(request => request.onFailure(error))
+              .catch((error) => {
+                failedRequestQueue.forEach((request) =>
+                  request.onFailure(error),
+                )
                 failedRequestQueue = []
 
                 signOut(ctx, { redirect: isBrowser })
@@ -73,7 +77,7 @@ export function setupAPI(ctx: NookiesContext = undefined): AxiosInstance {
               },
               onFailure: (err: AxiosError) => {
                 reject(err)
-              }
+              },
             })
           })
         } else {
@@ -86,7 +90,7 @@ export function setupAPI(ctx: NookiesContext = undefined): AxiosInstance {
       }
 
       return Promise.reject(error)
-    }
+    },
   )
 
   return api

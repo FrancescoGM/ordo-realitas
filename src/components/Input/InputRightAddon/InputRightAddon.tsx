@@ -1,10 +1,7 @@
 import { InputRightAddonRoot } from './InputRightAddon.styles'
 import { InputRightAddonProps } from './InputRightAddon.types'
 
-export function InputRightAddon({
-  children,
-  ...rest
-}: InputRightAddonProps): JSX.Element {
+export function InputRightAddon({ children, ...rest }: InputRightAddonProps) {
   return <InputRightAddonRoot {...rest}>{children}</InputRightAddonRoot>
 }
 

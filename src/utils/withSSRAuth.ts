@@ -1,7 +1,7 @@
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
-  GetServerSidePropsResult
+  GetServerSidePropsResult,
 } from 'next'
 
 import { parseCookies } from 'nookies'
@@ -11,13 +11,13 @@ import { AuthTokenError } from '../services/errors/AuthTokenError'
 
 function emptyFunction<P>(): GetServerSidePropsResult<P> {
   return {
-    props: {} as P
+    props: {} as P,
   }
 }
 
 export function withSSRAuth<P = unknown>(fn?: GetServerSideProps<P>) {
   return async (
-    ctx: GetServerSidePropsContext
+    ctx: GetServerSidePropsContext,
   ): Promise<GetServerSidePropsResult<P>> => {
     const cookies = parseCookies(ctx)
 
@@ -25,8 +25,8 @@ export function withSSRAuth<P = unknown>(fn?: GetServerSideProps<P>) {
       return {
         redirect: {
           destination: '/signin',
-          permanent: false
-        }
+          permanent: false,
+        },
       }
     }
 
@@ -43,8 +43,8 @@ export function withSSRAuth<P = unknown>(fn?: GetServerSideProps<P>) {
         return {
           redirect: {
             destination: '/signin',
-            permanent: false
-          }
+            permanent: false,
+          },
         }
       } else {
         return emptyFunction()

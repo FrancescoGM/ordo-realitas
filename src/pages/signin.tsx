@@ -15,7 +15,7 @@ import {
   SignInRoot,
   SignInContent,
   SignInForm,
-  SigninFormDividerContent
+  SigninFormDividerContent,
 } from '@styles/pages/signin'
 import { FormHandles, SubmitHandler } from '@unform/core'
 import { withSSRGuest } from '@utils/withSSRGuest'
@@ -32,14 +32,14 @@ const signInFormSchema = yup.object().shape({
     .string()
     .email('E-mail é inválido')
     .required('E-mail é obrigatório'),
-  password: yup.string().required('Senha é obrigatória')
+  password: yup.string().required('Senha é obrigatória'),
 })
 
-export default function SignIn(): JSX.Element {
+export default function SignIn() {
   const formRef = useRef<FormHandles>(null)
   const { onSignIn } = useAuth()
 
-  const handleSubmit: SubmitHandler<FormData> = async data => {
+  const handleSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       await signInFormSchema.validate(data, { abortEarly: false })
 

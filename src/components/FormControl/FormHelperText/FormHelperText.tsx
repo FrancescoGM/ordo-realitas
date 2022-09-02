@@ -9,7 +9,7 @@ export const FormHelperText = forwardRef<HTMLDivElement, FormHelperTextProps>(
     const { getHelperTextProps } = useFormControlContext()
 
     return <FormHelperTextRoot {...getHelperTextProps(props, ref)} />
-  }
+  },
 )
 
 FormHelperText.displayName = 'FormHelperText'

@@ -4,13 +4,13 @@ import { Spinner } from '../Spinner'
 import {
   ButtonRoot,
   ButtonLoadingContainer,
-  ButtonTextContainer
+  ButtonTextContainer,
 } from './Button.styles'
 import { ButtonProps } from './Button.types'
 
 const ButtonRaw: ForwardRefRenderFunction<HTMLButtonElement, ButtonProps> = (
   { children, size = 'md', loading = false, disabled = false, ...rest },
-  ref
+  ref,
 ) => {
   return (
     <ButtonRoot

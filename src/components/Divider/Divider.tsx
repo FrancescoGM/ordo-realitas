@@ -1,10 +1,7 @@
 import { DividerRoot } from './Divider.styles'
 import { DividerProps } from './Divider.types'
 
-export function Divider({
-  orientation = 'horizontal',
-  ...rest
-}: DividerProps): JSX.Element {
+export function Divider({ orientation = 'horizontal', ...rest }: DividerProps) {
   return (
     <DividerRoot
       orientation={orientation}

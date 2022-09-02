@@ -5,7 +5,7 @@ type AxiosErrorData = {
 }
 
 export function isAxiosError<E = AxiosErrorData>(
-  error: unknown
+  error: unknown,
 ): error is AxiosError<E> {
   return axios.isAxiosError(error)
 }

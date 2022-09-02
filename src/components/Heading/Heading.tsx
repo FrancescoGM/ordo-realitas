@@ -10,7 +10,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
         {children}
       </HeadingRoot>
     )
-  }
+  },
 )
 
 Heading.displayName = 'Heading'

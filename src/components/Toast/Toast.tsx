@@ -4,7 +4,7 @@ import {
   ToastDescription,
   ToastRoot,
   ToastTitle,
-  ToastClose
+  ToastClose,
 } from './Toast.styles'
 import { ToastProps } from './Toast.types'
 
@@ -13,7 +13,7 @@ export function Toast({
   description,
   status = 'success',
   ...rest
-}: ToastProps): JSX.Element {
+}: ToastProps) {
   return (
     <ToastRoot status={status} {...rest}>
       {title && <ToastTitle status={status}>{title}</ToastTitle>}

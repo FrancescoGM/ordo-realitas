@@ -4,7 +4,7 @@ import {
   ReactNode,
   useCallback,
   useEffect,
-  useState
+  useState,
 } from 'react'
 
 import axios from 'axios'
@@ -49,20 +49,20 @@ type SetCookiesData = {
 
 export function setCookies(
   ctx: NookiesContext,
-  { token, refresh_token }: SetCookiesData
+  { token, refresh_token }: SetCookiesData,
 ): void {
   if (token) {
     api.defaults.headers.common['x-access-token'] = `Bearer ${token}`
     setCookie(ctx, '@ordo_realitas:x-access-token', token, {
       maxAge: MAX_AGE_IN_SECONDS,
-      path: '/'
+      path: '/',
     })
   }
 
   if (refresh_token) {
     setCookie(ctx, '@ordo_realitas:refresh_token', refresh_token, {
       maxAge: MAX_AGE_IN_SECONDS,
-      path: '/'
+      path: '/',
     })
   }
 }
@@ -73,7 +73,7 @@ type SignOutOptions = {
 
 export function signOut(
   ctx: NookiesContext,
-  { redirect = true }: SignOutOptions = {}
+  { redirect = true }: SignOutOptions = {},
 ): void {
   delete api.defaults.headers.common['x-access-token']
   destroyCookie(ctx, '@ordo_realitas:x-access-token')
@@ -91,7 +91,7 @@ type AuthProviderProps = {
   children: ReactNode
 }
 
-export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
+export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -111,7 +111,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
           toast({
             title: 'Sessão expirada',
             description: 'Sua sessão expirou, faça login novamente.',
-            status: 'error'
+            status: 'error',
           })
         })
     }
@@ -124,7 +124,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
       try {
         const response = await api.post<UserResponse>('/sessions', {
           email,
-          password
+          password,
         })
 
         const { user, refresh_token, token } = response.data
@@ -140,7 +140,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
             title: 'Falha no login',
             description:
               error.response?.data.error || 'Não foi possível realizar o login',
-            status: 'error'
+            status: 'error',
           })
         } else {
           return Promise.reject(error)
@@ -149,7 +149,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
         setIsLoading(false)
       }
     },
-    [toast]
+    [toast],
   )
 
   const handleSignInWithGoogle = useCallback(
@@ -158,7 +158,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
 
       try {
         const response = await api.post<UserResponse>('/sessions/google', {
-          id_token
+          id_token,
         })
 
         const { user, refresh_token, token } = response.data
@@ -175,7 +175,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
             description:
               error.response?.data.error ||
               'Não foi possível realizar o login com o Google',
-            status: 'error'
+            status: 'error',
           })
         } else {
           return Promise.reject(error)
@@ -184,7 +184,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
         setIsLoading(false)
       }
     },
-    [toast]
+    [toast],
   )
 
   return (
@@ -194,7 +194,7 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
         isAuthenticated,
         isLoading,
         onSignIn: handleSignIn,
-        onSignInWithGoogle: handleSignInWithGoogle
+        onSignInWithGoogle: handleSignInWithGoogle,
       }}
     >
       {children}

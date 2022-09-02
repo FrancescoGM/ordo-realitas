@@ -5,14 +5,14 @@ import { Spinner } from '@components/Spinner'
 import {
   IconButtonLoadingContainer,
   IconButtonRoot,
-  IconButtonTextContainer
+  IconButtonTextContainer,
 } from './IconButton.styles'
 import { IconButtonProps } from './IconButton.types'
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (
     { children, size = 'md', loading = false, disabled = false, ...rest },
-    ref
+    ref,
   ) => {
     return (
       <IconButtonRoot
@@ -34,7 +34,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         )}
       </IconButtonRoot>
     )
-  }
+  },
 )
 
 IconButton.displayName = 'IconButton'

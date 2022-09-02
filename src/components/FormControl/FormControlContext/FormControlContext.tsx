@@ -12,7 +12,7 @@ import { FormLabelProps } from '../FormLabel'
 import { FormRequiredIndicatorProps } from '../FormRequiredIndicator'
 import {
   FormControlContextData,
-  FormControlProviderProps
+  FormControlProviderProps,
 } from './FormControlContext.types'
 
 export type FormControlProviderContext = Omit<
@@ -23,7 +23,7 @@ export type FormControlProviderContext = Omit<
 export const [FormControlProvider, useFormControlContext] =
   createContext<FormControlProviderContext>({
     strict: false,
-    name: 'FormControlContext'
+    name: 'FormControlContext',
   })
 
 export function useFormControlProvider({
@@ -52,12 +52,12 @@ export function useFormControlProvider({
     (props = {}, forwardedRef = null) => ({
       id: helpTextId,
       ...props,
-      ref: mergeRefs(forwardedRef, node => {
+      ref: mergeRefs(forwardedRef, (node) => {
         if (!node) return
         setHasHelpText(true)
-      })
+      }),
     }),
-    [helpTextId]
+    [helpTextId],
   )
 
   const getLabelProps = useCallback<
@@ -67,9 +67,9 @@ export function useFormControlProvider({
       ...props,
       ref: forwardedRef,
       id: props.id ?? labelId,
-      htmlFor: props.htmlFor ?? id
+      htmlFor: props.htmlFor ?? id,
     }),
-    [id, labelId]
+    [id, labelId],
   )
 
   const getErrorMessageProps = useCallback<
@@ -78,13 +78,13 @@ export function useFormControlProvider({
     (props = {}, forwardedRef = null) => ({
       id: feedbackId,
       ...props,
-      ref: mergeRefs(forwardedRef, node => {
+      ref: mergeRefs(forwardedRef, (node) => {
         if (!node) return
         setHasFeedbackText(true)
       }),
-      'aria-live': 'polite'
+      'aria-live': 'polite',
     }),
-    [feedbackId]
+    [feedbackId],
   )
 
   const getRootProps = useCallback<
@@ -94,9 +94,9 @@ export function useFormControlProvider({
       ...props,
       ...htmlProps,
       ref: forwardedRef,
-      role: 'group'
+      role: 'group',
     }),
-    [htmlProps]
+    [htmlProps],
   )
 
   const getRequiredIndicatorProps = useCallback<
@@ -107,9 +107,9 @@ export function useFormControlProvider({
       ref: forwardedRef,
       role: 'presentation',
       'aria-hidden': true,
-      children: props?.children || '*'
+      children: props?.children || '*',
     }),
-    []
+    [],
   )
 
   return {
@@ -133,6 +133,6 @@ export function useFormControlProvider({
     getErrorMessageProps,
     getRootProps,
     getLabelProps,
-    getRequiredIndicatorProps
+    getRequiredIndicatorProps,
   }
 }

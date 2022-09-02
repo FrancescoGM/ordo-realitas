@@ -2,7 +2,7 @@ import { styled } from '@stitches'
 
 export const HeadingRoot = styled('h1', {
   defaultVariants: {
-    size: 'md'
+    size: 'md',
   },
 
   variants: {
@@ -14,7 +14,7 @@ export const HeadingRoot = styled('h1', {
       xl: { fontSize: '$xl' },
       '2xl': { fontSize: '$2xl' },
       '3xl': { fontSize: '$3xl' },
-      '4xl': { fontSize: '$4xl' }
-    }
-  }
+      '4xl': { fontSize: '$4xl' },
+    },
+  },
 })

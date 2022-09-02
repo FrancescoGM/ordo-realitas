@@ -11,7 +11,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         <LinkRoot colorScheme={colorScheme}>{children}</LinkRoot>
       </NextLink>
     )
-  }
+  },
 )
 
 Link.displayName = 'Link'

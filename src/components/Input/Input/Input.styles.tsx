@@ -12,6 +12,6 @@ export const InputRoot = styled('input', {
   transition: 'border-color 0.2s',
 
   '&:focus': {
-    borderColor: '$violet9'
-  }
+    borderColor: '$violet9',
+  },
 })

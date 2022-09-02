@@ -26,10 +26,10 @@ export const ResetRoot = styled('div', {
     gap: '$4',
 
     h1: {
-      marginBottom: '$2'
+      marginBottom: '$2',
     },
     '>button': {
-      marginTop: '$2'
-    }
-  }
+      marginTop: '$2',
+    },
+  },
 })

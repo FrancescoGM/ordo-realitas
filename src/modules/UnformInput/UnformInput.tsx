@@ -4,13 +4,13 @@ import {
   FormControl,
   FormErrorMessage,
   FormHelperText,
-  FormLabel
+  FormLabel,
 } from '@components/FormControl'
 import {
   Input,
   InputGroup,
   InputLeftAddon,
-  InputRightAddon
+  InputRightAddon,
 } from '@components/Input'
 import { useField } from '@unform/core'
 
@@ -32,7 +32,7 @@ export const UnformInput = forwardRef<HTMLInputElement, UnformInputProps>(
       helperText,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const inputRef = useRef<HTMLInputElement>(null)
     const { fieldName, defaultValue, clearError, error, registerField } =
@@ -42,7 +42,7 @@ export const UnformInput = forwardRef<HTMLInputElement, UnformInputProps>(
       registerField({
         name: fieldName,
         ref: inputRef.current,
-        path: 'value'
+        path: 'value',
       })
     }, [fieldName, registerField])
 
@@ -73,7 +73,7 @@ export const UnformInput = forwardRef<HTMLInputElement, UnformInputProps>(
         )}
       </FormControl>
     )
-  }
+  },
 )
 
 UnformInput.displayName = 'UnformInput'

@@ -9,5 +9,5 @@ export const VisuallyHiddenWrapper = styled('span', {
   padding: '0px',
   overflow: 'hidden',
   whitespace: 'nowrap',
-  position: 'absolute'
+  position: 'absolute',
 })

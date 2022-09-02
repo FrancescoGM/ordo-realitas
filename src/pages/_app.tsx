@@ -5,14 +5,14 @@ import { AuthProvider } from '@contexts/AuthContext'
 import { ToastProvider } from '@contexts/ToastContext'
 import { darkTheme } from '@stitches'
 
-export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider
       attribute="class"
       defaultTheme="system"
       value={{
         light: 'light',
-        dark: darkTheme.className
+        dark: darkTheme.className,
       }}
     >
       <ToastProvider>

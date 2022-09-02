@@ -3,10 +3,7 @@ import { useRef } from 'react'
 import { InputLeftAddonRoot } from './InputLeftAddon.styles'
 import { InputLeftAddonProps } from './InputLeftAddon.types'
 
-export function InputLeftAddon({
-  children,
-  ...rest
-}: InputLeftAddonProps): JSX.Element {
+export function InputLeftAddon({ children, ...rest }: InputLeftAddonProps) {
   const ref = useRef<HTMLSpanElement>(null)
 
   return (

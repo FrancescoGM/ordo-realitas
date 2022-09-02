@@ -7,7 +7,7 @@ type ValidationErrors = {
 export function yupErrorToUnform(error: unknown): Record<string, string> {
   if (error instanceof ValidationError) {
     const validationErrors: ValidationErrors = {}
-    error.inner.forEach(error => {
+    error.inner.forEach((error) => {
       if (error.path) validationErrors[error.path] = error.message
     })
     return validationErrors

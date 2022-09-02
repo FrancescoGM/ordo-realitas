@@ -30,17 +30,17 @@ const formSchema = yup.object().shape({
     .min(8, 'A senha deve ter no mínimo 8 caracteres')
     .max(32, 'A senha deve ter no máximo 32 caracteres')
     .is([yup.ref('password')], 'As senhas não coincidem')
-    .required('Confirmar senha é obrigatório')
+    .required('Confirmar senha é obrigatório'),
 })
 
-export default function Reset(): JSX.Element {
+export default function Reset() {
   const { query } = useRouter()
   const formRef = useRef<FormHandles>(null)
   const [loading, setLoading] = useState(false)
   const toast = useToast()
 
   const handleSubmit: SubmitHandler<FormData> = useCallback(
-    async data => {
+    async (data) => {
       setLoading(true)
       try {
         await formSchema.validate(data, { abortEarly: false })
@@ -52,7 +52,7 @@ export default function Reset(): JSX.Element {
         toast({
           title: 'Senha resetada',
           description: 'Sua senha foi alterada com sucesso',
-          status: 'success'
+          status: 'success',
         })
       } catch (error) {
         if (error instanceof yup.ValidationError) {
@@ -61,20 +61,20 @@ export default function Reset(): JSX.Element {
           toast({
             title: 'Ocorreu um erro ao tentar resetar sua senha',
             description: error.response?.data.message,
-            status: 'error'
+            status: 'error',
           })
         } else {
           toast({
             title: 'Ocorreu algo inesperado',
             description: 'Um erro inexplicável ocorreu',
-            status: 'error'
+            status: 'error',
           })
         }
       } finally {
         setLoading(false)
       }
     },
-    [query.token, toast]
+    [query.token, toast],
   )
   return (
     <>

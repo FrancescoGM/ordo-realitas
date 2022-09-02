@@ -2,11 +2,11 @@ import { keyframes, styled, theme } from '../../../stitches.config'
 
 const spinnerAnimation = keyframes({
   '0%': {
-    transform: 'rotate(0deg)'
+    transform: 'rotate(0deg)',
   },
   '100%': {
-    transform: 'rotate(360deg)'
-  }
+    transform: 'rotate(360deg)',
+  },
 })
 
 export const SpinnerWrapper = styled('div', {
@@ -26,20 +26,20 @@ export const SpinnerWrapper = styled('div', {
     size: {
       sm: {
         width: theme.fontSizes.sm,
-        height: theme.fontSizes.sm
+        height: theme.fontSizes.sm,
       },
       md: {
         width: theme.fontSizes.md,
-        height: theme.fontSizes.md
+        height: theme.fontSizes.md,
       },
       lg: {
         width: theme.fontSizes.lg,
-        height: theme.fontSizes.lg
+        height: theme.fontSizes.lg,
       },
       xl: {
         width: theme.fontSizes.xl,
-        height: theme.fontSizes.xl
-      }
-    }
-  }
+        height: theme.fontSizes.xl,
+      },
+    },
+  },
 })

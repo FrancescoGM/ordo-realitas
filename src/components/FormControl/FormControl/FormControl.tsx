@@ -2,7 +2,7 @@ import { forwardRef, useMemo } from 'react'
 
 import {
   FormControlProvider,
-  useFormControlProvider
+  useFormControlProvider,
 } from '../FormControlContext'
 import { FormControlRoot } from './FormControl.styles'
 import { FormControlProps } from './FormControl.types'
@@ -14,7 +14,7 @@ export const FormControl = forwardRef<HTMLDivElement, FormControlProps>(
 
     const { children, ...rest } = useMemo(
       () => getRootProps(htmlProps, ref),
-      [getRootProps, htmlProps, ref]
+      [getRootProps, htmlProps, ref],
     )
 
     return (
@@ -22,7 +22,7 @@ export const FormControl = forwardRef<HTMLDivElement, FormControlProps>(
         <FormControlProvider value={context}>{children}</FormControlProvider>
       </FormControlRoot>
     )
-  }
+  },
 )
 
 FormControl.displayName = 'FormControl'

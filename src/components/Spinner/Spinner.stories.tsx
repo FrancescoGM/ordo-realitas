@@ -8,17 +8,17 @@ export default {
     label: {
       control: 'text',
       description: 'The text to display inside the button',
-      defaultValue: 'Loading...'
+      defaultValue: 'Loading...',
     },
     size: {
       control: 'inline-radio',
       options: ['sm', 'md', 'lg', 'xl'],
-      defaultValue: 'lg'
-    }
+      defaultValue: 'lg',
+    },
   },
-  component: SpinnerRoot
+  component: SpinnerRoot,
 } as ComponentMeta<typeof SpinnerRoot>
 
-export const Spinner: ComponentStory<typeof SpinnerRoot> = args => (
+export const Spinner: ComponentStory<typeof SpinnerRoot> = (args) => (
   <SpinnerRoot {...args} />
 )

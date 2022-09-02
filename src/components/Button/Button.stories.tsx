@@ -11,8 +11,8 @@ export default {
       defaultValue: false,
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
+        defaultValue: { summary: false },
+      },
     },
     children: {
       control: 'text',
@@ -20,8 +20,8 @@ export default {
       defaultValue: 'LABEL',
       table: {
         type: { summary: null },
-        defaultValue: { summary: null }
-      }
+        defaultValue: { summary: null },
+      },
     },
     variant: {
       options: ['primary', 'secondary'],
@@ -30,8 +30,8 @@ export default {
       control: 'inline-radio',
       table: {
         type: { summary: 'primary | secondary' },
-        defaultValue: { summary: 'primary' }
-      }
+        defaultValue: { summary: 'primary' },
+      },
     },
 
     size: {
@@ -42,8 +42,8 @@ export default {
       control: 'inline-radio',
       table: {
         type: { summary: 'sm | md | lg | xl' },
-        defaultValue: { summary: 'md' }
-      }
+        defaultValue: { summary: 'md' },
+      },
     },
     loading: {
       control: 'boolean',
@@ -51,8 +51,8 @@ export default {
       defaultValue: false,
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
+        defaultValue: { summary: false },
+      },
     },
     full: {
       control: 'boolean',
@@ -60,20 +60,20 @@ export default {
       defaultValue: false,
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
-    }
+        defaultValue: { summary: false },
+      },
+    },
   },
-  component: Button
+  component: Button,
 } as ComponentMeta<typeof Button>
 
-export const Primary: ComponentStory<typeof Button> = args => (
+export const Primary: ComponentStory<typeof Button> = (args) => (
   <Button variant="primary" {...args}>
     {args.children}
   </Button>
 )
 
-export const Secondary: ComponentStory<typeof Button> = args => (
+export const Secondary: ComponentStory<typeof Button> = (args) => (
   <Button variant="secondary" {...args}>
     {args.children}
   </Button>
@@ -81,6 +81,6 @@ export const Secondary: ComponentStory<typeof Button> = args => (
 
 Secondary.argTypes = {
   variant: {
-    defaultValue: 'secondary'
-  }
+    defaultValue: 'secondary',
+  },
 }
