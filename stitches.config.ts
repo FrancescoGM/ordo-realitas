@@ -4,11 +4,13 @@ import {
   grass,
   tomato,
   amber,
+  blue,
   mauveDark,
   grassDark,
   violetDark,
   tomatoDark,
   amberDark,
+  blueDark,
 } from '@radix-ui/colors'
 import { createStitches } from '@stitches/react'
 
@@ -29,9 +31,11 @@ export const {
       ...mauve,
       ...tomato,
       ...amber,
+      ...blue,
     },
     shadows: {
       outlined: '0 0 0 4px $colors$mauve1, 0 0 0 6px $colors$mauve12',
+      soft: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
     },
     fonts: {
       default: '"Roboto", sans-serif',
@@ -83,6 +87,22 @@ export const {
       '20': '5rem',
       '40': '10rem',
     },
+    sizes: {
+      '0': '0rem',
+      '1': '0.25rem',
+      '2': '0.5rem',
+      '3': '0.75rem',
+      '4': '1rem',
+      '5': '1.25rem',
+      '6': '1.5rem',
+      '8': '2rem',
+      '10': '2.5rem',
+      '12': '3rem',
+      '16': '4rem',
+      '20': '5rem',
+      '40': '10rem',
+      window: '1120px',
+    },
     zIndices: {
       header: '100',
     },
@@ -102,6 +122,7 @@ export const darkTheme = createTheme({
     ...violetDark,
     ...tomatoDark,
     ...amberDark,
+    ...blueDark,
   },
   shadows: {
     $$mauve1: '$colors$mauve1',

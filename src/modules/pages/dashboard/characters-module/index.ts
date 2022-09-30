@@ -1,0 +1,1 @@
+export { CharactersModule } from './CharactersModule'

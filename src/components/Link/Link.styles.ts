@@ -6,6 +6,10 @@ export const LinkRoot = styled('a', {
   borderRadius: '$base',
   textDecoration: 'none',
 
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '$2',
+
   defaultVariants: {
     colorScheme: 'white',
   },

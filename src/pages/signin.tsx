@@ -8,9 +8,9 @@ import { Button } from '@components/Button'
 import { Divider } from '@components/Divider'
 import { Link } from '@components/Link'
 import { useAuth } from '@hooks/useAuth'
-import { GoogleButton } from '@modules/GoogleButton'
-import { UnformInput } from '@modules/UnformInput'
-import { UnformPasswordInput } from '@modules/UnformPasswordInput'
+import { GoogleButton } from '@modules/components/GoogleButton'
+import { UnformInput } from '@modules/components/UnformInput'
+import { UnformPasswordInput } from '@modules/components/UnformPasswordInput'
 import {
   SignInRoot,
   SignInContent,

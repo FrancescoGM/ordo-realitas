@@ -6,7 +6,7 @@ import {
 } from 'react-icons/io5'
 
 import { IconButton } from '@components/IconButton'
-import { UnformInput } from '@modules/UnformInput'
+import { UnformInput } from '@modules/components/UnformInput'
 
 import { UnformPasswordInputProps } from './UnformPasswordInput.types'
 

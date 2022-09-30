@@ -2,6 +2,7 @@ import { styled } from '@stitches'
 
 export const IconButtonRoot = styled('button', {
   position: 'relative',
+  zIndex: 1,
   border: 'none',
   borderRadius: '$base',
 
@@ -129,7 +130,7 @@ export const IconButtonRoot = styled('button', {
         backgroundColor: '$violet9',
 
         svg: {
-          color: '$mauve1',
+          color: '$mauve12',
         },
 
         '&:hover:not(:disabled)': {
@@ -140,7 +141,7 @@ export const IconButtonRoot = styled('button', {
         backgroundColor: '$grass9',
 
         svg: {
-          color: '$mauve1',
+          color: '$mauve12',
         },
 
         '&:hover:not(:disabled)': {

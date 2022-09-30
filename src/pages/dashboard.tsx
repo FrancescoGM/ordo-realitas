@@ -1,23 +1,32 @@
-import { GetServerSideProps } from 'next'
-import { useEffect } from 'react'
+// import { GetServerSideProps } from 'next'
 
-import { useAuth } from '@hooks/useAuth'
-import { api } from '@services/api'
-import { withSSRAuth } from '@utils/withSSRAuth'
+import Head from 'next/head'
 
-export default function Dashboard(): JSX.Element {
-  const { user } = useAuth()
+import { Heading } from '@components/Heading'
+import { Header } from '@modules/components/Header'
+import { CharactersModule } from '@modules/pages/dashboard/characters-module'
+import { DashboardRoot, DashboardContent } from '@styles/pages/dashboard'
 
-  useEffect(() => {
-    api.get('/sessions/refresh/user')
-  }, [])
+// import { withSSRAuth } from '@utils/withSSRAuth'
 
+export default function Dashboard() {
   return (
-    <div>
-      <h1>dashboard</h1>
-      <p>{user?.name}</p>
-    </div>
+    <>
+      <Head>
+        <title>Dashboard | Ordo Realitas</title>
+      </Head>
+      <Header />
+      <DashboardRoot>
+        <DashboardContent>
+          <Heading size="3xl">
+            Bem vindo de volta,
+            <br /> aqui estão seus personagens
+          </Heading>
+          <CharactersModule />
+        </DashboardContent>
+      </DashboardRoot>
+    </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = withSSRAuth()
+// export const getServerSideProps: GetServerSideProps = withSSRAuth()
