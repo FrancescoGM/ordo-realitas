@@ -2,7 +2,7 @@ import NextLink from 'next/link'
 import { forwardRef } from 'react'
 
 import { LinkRoot } from './Link.styles'
-import { LinkProps } from './Linl.types'
+import { LinkProps } from './Link.types'
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, colorScheme, ...rest }, ref) => {

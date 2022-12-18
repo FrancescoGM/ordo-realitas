@@ -5,7 +5,7 @@ import { QueryClientProvider } from 'react-query'
 import { AuthProvider } from '@contexts/AuthContext'
 import { ToastProvider } from '@contexts/ToastContext'
 import { queryClient } from '@services/queryClient'
-import { darkTheme } from '@stitches'
+import { darkTheme } from '@stitches-config'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

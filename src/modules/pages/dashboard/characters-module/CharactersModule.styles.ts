@@ -1,4 +1,4 @@
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const CharactersModuleRoot = styled('div', {
   display: 'flex',

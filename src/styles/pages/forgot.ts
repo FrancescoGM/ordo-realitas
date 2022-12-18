@@ -1,4 +1,4 @@
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const ForgotRoot = styled('div', {
   width: '100%',

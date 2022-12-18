@@ -1,10 +1,13 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, SVGAttributes } from 'react'
 
 import { VariantProps } from '@stitches/react'
 
 import { IconRoot } from './Icon.styles'
 
-export type IconProps = VariantProps<typeof IconRoot> & {
-  as?: any
-  children?: ReactNode
-}
+export type IconColors = 'blue' | 'yellow' | 'gray' | 'green' | 'red'
+
+export type IconProps = VariantProps<typeof IconRoot> &
+  HTMLAttributes<SVGAttributes<HTMLElement>> & {
+    as?: any
+    fallback?: any
+  }

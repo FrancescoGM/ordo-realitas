@@ -1,4 +1,4 @@
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const LinkRoot = styled('a', {
   outline: 'none',

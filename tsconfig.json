@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
-      "@stitches": ["../stitches.config"],
+      "@stitches-config": ["../stitches.config"],
       "@hooks/*": ["hooks/*"],
       "@utils/*": ["utils/*"],
       "@pages/*": ["pages/*"],

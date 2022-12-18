@@ -9,7 +9,7 @@ const spinnerAnimation = keyframes({
   },
 })
 
-export const SpinnerWrapper = styled('div', {
+export const SpinnerRoot = styled('div', {
   display: 'inline-block',
 
   borderStyle: 'solid',

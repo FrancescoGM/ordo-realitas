@@ -1,10 +1,8 @@
 import { Children, isValidElement, ReactElement, ReactNode } from 'react'
 
 type ValidChildren = ReactElement & {
-  width: number
   type: {
-    id: string
-    name: string
+    displayName: string
   }
 }
 

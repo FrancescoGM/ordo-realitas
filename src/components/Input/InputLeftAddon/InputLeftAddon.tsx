@@ -1,16 +1,16 @@
-import { useRef } from 'react'
+import { forwardRef } from 'react'
 
 import { InputLeftAddonRoot } from './InputLeftAddon.styles'
 import { InputLeftAddonProps } from './InputLeftAddon.types'
 
-export function InputLeftAddon({ children, ...rest }: InputLeftAddonProps) {
-  const ref = useRef<HTMLSpanElement>(null)
+export const InputLeftAddon = forwardRef<HTMLSpanElement, InputLeftAddonProps>(
+  ({ children, ...rest }, ref) => {
+    return (
+      <InputLeftAddonRoot ref={ref} {...rest}>
+        {children}
+      </InputLeftAddonRoot>
+    )
+  },
+)
 
-  return (
-    <InputLeftAddonRoot ref={ref} {...rest}>
-      {children}
-    </InputLeftAddonRoot>
-  )
-}
-
-InputLeftAddon.id = 'InputLeftAddon'
+InputLeftAddon.displayName = 'InputLeftAddon'

@@ -4,9 +4,9 @@ import { HeadingRoot } from './Heading.styles'
 import { HeadingProps } from './Heading.types'
 
 export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ children, ...rest }, ref) => {
+  ({ children, noOfLines, ...rest }, ref) => {
     return (
-      <HeadingRoot ref={ref} {...rest}>
+      <HeadingRoot ref={ref} css={{ noOfLines }} {...rest}>
         {children}
       </HeadingRoot>
     )

@@ -1,4 +1,4 @@
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const DividerRoot = styled('hr', {
   borderColor: '$mauve10',

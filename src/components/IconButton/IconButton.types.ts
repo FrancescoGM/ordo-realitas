@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-import { VariantProps } from '@stitches/react'
+import { VariantProps } from '@stitches-config/react'
 
 import { IconButtonRoot } from './IconButton.styles'
 

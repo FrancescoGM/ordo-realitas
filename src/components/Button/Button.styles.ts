@@ -1,4 +1,5 @@
-import { styled } from '@stitches'
+import { SpinnerRoot } from '@components/Spinner/Spinner.styles'
+import { styled } from '@stitches-config'
 
 export const ButtonRoot = styled('button', {
   position: 'relative',
@@ -13,12 +14,12 @@ export const ButtonRoot = styled('button', {
 
   fontSize: '$xl',
   fontWeight: '$bold',
-  color: '$mauve12',
+  color: '$mauve1',
   lineHeight: '$shorter',
 
   cursor: 'pointer',
   outline: '0px',
-  transition: 'background 0.3s, border-color 0.3s, box-shadow 0.3s',
+  transition: 'background 0.3s, border-color 0.3s, box-shadow 0.3s, color 0.3s',
 
   '&:focus-visible:not(:disabled)': {
     boxShadow: '$outlined',
@@ -28,6 +29,7 @@ export const ButtonRoot = styled('button', {
     blocked: false,
     full: false,
     outlined: false,
+    uppercase: false,
     size: 'md',
     variant: 'primary',
   },
@@ -36,39 +38,58 @@ export const ButtonRoot = styled('button', {
     {
       variant: 'primary',
       outlined: true,
+
       css: {
+        color: '$violet9',
         borderColor: '$violet9',
         backgroundColor: 'transparent',
 
-        '&:hover:not(:disabled)': {
+        [SpinnerRoot.selector]: {
+          borderTopColor: '$violet9',
+          borderRightColor: '$violet9',
+        },
+
+        '&:is(:hover, :focus-visible):not(:disabled)': {
           borderColor: '$violet8',
-          backgroundColor: '$violet8',
+          backgroundColor: '$violet3',
         },
       },
     },
+
     {
       variant: 'secondary',
       outlined: true,
+
       css: {
+        color: '$grass9',
         borderColor: '$grass9',
         backgroundColor: 'transparent',
 
-        '&:hover:not(:disabled)': {
+        [SpinnerRoot.selector]: {
+          borderTopColor: '$grass9',
+          borderRightColor: '$grass9',
+        },
+
+        '&:is(:hover, :focus-visible):not(:disabled)': {
           borderColor: '$grass8',
-          backgroundColor: '$grass8',
+          backgroundColor: '$grass3',
         },
       },
     },
+
     {
       variant: 'tertiary',
       outlined: true,
+
       css: {
         border: 'none',
       },
     },
+
     {
       variant: 'danger',
       outlined: true,
+
       css: {
         border: 'none',
       },
@@ -92,33 +113,38 @@ export const ButtonRoot = styled('button', {
         cursor: 'not-allowed',
       },
     },
+    uppercase: {
+      true: {
+        textTransform: 'uppercase',
+      },
+    },
     size: {
       sm: {
         fontSize: '$sm',
         padding: '$2 $4',
 
-        svg: {
+        [SpinnerRoot.selector]: {
           fontSize: 'calc($sm + 1px)',
         },
       },
       md: {
         fontSize: '$md',
         padding: '$2 $4',
-        svg: {
+        [SpinnerRoot.selector]: {
           fontSize: 'calc($md + 1px)',
         },
       },
       lg: {
         fontSize: '$lg',
         padding: '$2 $6',
-        svg: {
+        [SpinnerRoot.selector]: {
           fontSize: 'calc($lg + 1px)',
         },
       },
       xl: {
         fontSize: '$xl',
         padding: '$2 $6',
-        svg: {
+        [SpinnerRoot.selector]: {
           fontSize: 'calc($xl + 1px)',
         },
       },
@@ -127,8 +153,9 @@ export const ButtonRoot = styled('button', {
       primary: {
         backgroundColor: '$violet9',
 
-        svg: {
-          color: '$mauve1',
+        [SpinnerRoot.selector]: {
+          borderTopColor: '$mauve1',
+          borderRightColor: '$mauve1',
         },
 
         '&:hover:not(:disabled)': {
@@ -138,8 +165,9 @@ export const ButtonRoot = styled('button', {
       secondary: {
         backgroundColor: '$grass9',
 
-        svg: {
-          color: '$mauve1',
+        [SpinnerRoot.selector]: {
+          borderTopColor: '$mauve1',
+          borderRightColor: '$mauve1',
         },
 
         '&:hover:not(:disabled)': {
@@ -149,8 +177,9 @@ export const ButtonRoot = styled('button', {
       tertiary: {
         backgroundColor: 'transparent',
 
-        svg: {
-          color: '$violet9',
+        [SpinnerRoot.selector]: {
+          borderTopColor: '$violet9',
+          borderRightColor: '$violet9',
         },
 
         '&:hover:not(:disabled)': {
@@ -160,6 +189,11 @@ export const ButtonRoot = styled('button', {
       danger: {
         color: '$tomato9',
         backgroundColor: 'transparent',
+
+        [SpinnerRoot.selector]: {
+          borderTopColor: '$tomato9',
+          borderRightColor: '$tomato9',
+        },
 
         '&:hover:not(:disabled)': {
           backgroundColor: `$mauve2`,

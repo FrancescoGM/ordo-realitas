@@ -1,6 +1,5 @@
 import { Root, Title, Description, Close } from '@radix-ui/react-toast'
-
-import { styled, keyframes } from '../../../stitches.config'
+import { styled, keyframes } from '@stitches-config'
 
 const slideRight = keyframes({
   from: { transform: 'translateX(var(--radix-toast-swipe-end-x))' },

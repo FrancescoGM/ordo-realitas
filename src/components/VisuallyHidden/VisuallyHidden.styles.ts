@@ -1,6 +1,6 @@
-import { styled } from '../../../stitches.config'
+import { styled } from '@stitches-config'
 
-export const VisuallyHiddenWrapper = styled('span', {
+export const VisuallyHiddenRoot = styled('span', {
   border: '0px',
   clip: 'rect(0px, 0px, 0px, 0px)',
   height: '1px',

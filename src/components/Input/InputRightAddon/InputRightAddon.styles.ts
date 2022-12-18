@@ -1,4 +1,4 @@
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const InputRightAddonRoot = styled('span', {
   position: 'absolute',
@@ -13,7 +13,19 @@ export const InputRightAddonRoot = styled('span', {
   justifyContent: 'center',
 
   svg: {
-    fontSize: '22px',
     color: '$mauve11',
+  },
+
+  defaultVariants: {
+    size: 'md',
+  },
+
+  variants: {
+    size: {
+      sm: { svg: { fontSize: '$lg' } },
+      md: { svg: { fontSize: '$lg' } },
+      lg: { svg: { fontSize: '$xl' } },
+      xl: { svg: { fontSize: '$xl' } },
+    },
   },
 })

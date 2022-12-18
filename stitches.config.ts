@@ -113,6 +113,17 @@ export const {
     lg: '(max-width: 62em)',
     xl: '(max-width: 80em)',
   },
+  utils: {
+    noOfLines: (value: number) =>
+      value > 0 && {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        lineHeight: value,
+        '-webkit-line-clamp': value,
+        '-webkit-box-orient': 'vertical',
+      },
+  },
 })
 
 export const darkTheme = createTheme({
@@ -130,3 +141,5 @@ export const darkTheme = createTheme({
     outlined: '0 0 0 4px $colors$mauve1, 0 0 0 6px $colors$mauve12',
   },
 })
+
+export type Theme = typeof theme

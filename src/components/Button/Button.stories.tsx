@@ -1,39 +1,28 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
-import { Button } from './Button'
+import { Button, ButtonProps } from '@components/Button'
+import { ComponentMeta, StoryObj } from '@storybook/react'
 
 export default {
   title: 'Actions/Button',
   argTypes: {
-    disabled: {
-      control: 'boolean',
-      description: 'Whether the button is disabled',
-      defaultValue: false,
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
-    },
     children: {
       control: 'text',
       description: 'The text to display inside the button',
-      defaultValue: 'LABEL',
+      defaultValue: 'label',
       table: {
         type: { summary: null },
         defaultValue: { summary: null },
       },
     },
     variant: {
-      options: ['primary', 'secondary'],
+      options: ['primary', 'secondary', 'tertiary', 'danger'],
       description: 'The variant of the button',
       defaultValue: 'primary',
       control: 'inline-radio',
       table: {
-        type: { summary: 'primary | secondary' },
+        type: { summary: 'primary | secondary | tertiary | danger' },
         defaultValue: { summary: 'primary' },
       },
     },
-
     size: {
       defaultValue: 'md',
       description: 'The size of the button',
@@ -43,6 +32,24 @@ export default {
       table: {
         type: { summary: 'sm | md | lg | xl' },
         defaultValue: { summary: 'md' },
+      },
+    },
+    outlined: {
+      control: 'boolean',
+      description: 'Whether the button is outlined',
+      defaultValue: false,
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
+    uppercase: {
+      control: 'boolean',
+      description: 'Whether the button is uppercase',
+      defaultValue: false,
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
       },
     },
     loading: {
@@ -63,24 +70,51 @@ export default {
         defaultValue: { summary: false },
       },
     },
+    disabled: {
+      control: 'boolean',
+      description: 'Whether the button is disabled',
+      defaultValue: false,
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
   },
   component: Button,
 } as ComponentMeta<typeof Button>
 
-export const Primary: ComponentStory<typeof Button> = (args) => (
-  <Button variant="primary" {...args}>
-    {args.children}
-  </Button>
-)
+export const Primary: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'primary',
+  },
+}
 
-export const Secondary: ComponentStory<typeof Button> = (args) => (
-  <Button variant="secondary" {...args}>
-    {args.children}
-  </Button>
-)
+export const Secondary: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'secondary',
+  },
+}
 
-Secondary.argTypes = {
-  variant: {
-    defaultValue: 'secondary',
+export const Tertiary: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'tertiary',
+  },
+}
+
+export const Danger: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'danger',
+  },
+}
+
+export const Outlined: StoryObj<ButtonProps> = {
+  args: {
+    outlined: true,
+  },
+}
+
+export const Loading: StoryObj<ButtonProps> = {
+  args: {
+    loading: true,
   },
 }

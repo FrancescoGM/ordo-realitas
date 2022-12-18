@@ -10,4 +10,5 @@ export type HeadingProps = HTMLAttributes<HTMLHeadingElement> &
   VariantProps<typeof HeadingRoot> & {
     children?: ReactNode
     as?: As
+    noOfLines?: number
   }

@@ -1,7 +1,7 @@
 import { FocusEventHandler } from 'react'
 
-import { ariaAttr } from '@utils/dom'
-import { callAllHandlers } from '@utils/function'
+import { ariaAttr } from '@utils/core-utils/dom'
+import { callAllHandlers } from '@utils/core-utils/function'
 
 import { useFormControlContext } from './FormControlContext'
 import { FormControlOptions } from './FormControlContext.types'

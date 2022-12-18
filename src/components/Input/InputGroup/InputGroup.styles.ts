@@ -1,23 +1,15 @@
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const InputGroupRoot = styled('div', {
   position: 'relative',
   width: 'inherit',
 
   variants: {
-    leftIcon: {
-      true: {
-        input: {
-          paddingLeft: '$10',
-        },
-      },
-    },
-    rightIcon: {
-      true: {
-        input: {
-          paddingRight: '$10',
-        },
-      },
+    size: {
+      sm: {},
+      md: {},
+      lg: {},
+      xl: {},
     },
   },
 })

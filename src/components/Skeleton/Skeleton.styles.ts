@@ -1,34 +1,22 @@
-import { keyframes, styled } from '@stitches'
+import { keyframes, styled } from '@stitches-config'
 
-const animation = keyframes({
-  '0%': {
-    backgroundColor: '$mauve3',
-  },
-  '100%': {
-    backgroundColor: '$mauve5',
-  },
+const pulse = keyframes({
+  from: { backgroundColor: '$mauve8' },
+  to: { backgroundColor: '$mauve9' },
+})
+
+const fadeIn = keyframes({
+  from: { opacity: 0.2 },
+  to: { opacity: 1 },
 })
 
 export const SkeletonRoot = styled('div', {
-  width: '100%',
-  display: 'block',
-  backgroundColor: '$mauve3',
-  animation: `${animation} 750ms infinite alternate`,
-
   defaultVariants: {
-    size: 'md',
+    loaded: false,
     variant: 'text',
   },
 
   variants: {
-    size: {
-      sm: { width: '$2', height: '$2' },
-      md: { width: '$4', height: '$4' },
-      lg: { width: '$8', height: '$$8' },
-      xl: { width: '$12', height: '$$12' },
-      '2xl': { width: '$20 ', height: '$20 ' },
-      '3xl': { width: '$40', height: '$40' },
-    },
     variant: {
       circle: {
         borderRadius: '$pill',
@@ -36,6 +24,27 @@ export const SkeletonRoot = styled('div', {
       text: {
         borderRadius: '$base',
         width: '100%',
+      },
+    },
+    loaded: {
+      true: {
+        animation: `${fadeIn} 1s`,
+      },
+      false: {
+        opacity: 0.5,
+
+        cursor: 'default',
+        pointerEvents: 'none',
+        userSelect: 'none',
+
+        borderRadius: '$base',
+        backgroundColor: '$mauve7',
+
+        animation: `${pulse} 0.8s linear 0s infinite alternate none running`,
+
+        '> *': {
+          visibility: 'hidden',
+        },
       },
     },
   },

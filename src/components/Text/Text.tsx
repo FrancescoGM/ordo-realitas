@@ -4,9 +4,9 @@ import { TextRoot } from './Text.styles'
 import { TextProps } from './Text.types'
 
 export const Text = forwardRef<HTMLElement, TextProps>(
-  ({ children, ...rest }, ref) => {
+  ({ children, noOfLines, ...rest }, ref) => {
     return (
-      <TextRoot ref={ref} {...rest}>
+      <TextRoot ref={ref} css={{ noOfLines }} {...rest}>
         {children}
       </TextRoot>
     )

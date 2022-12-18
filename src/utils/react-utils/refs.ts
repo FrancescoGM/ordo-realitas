@@ -1,6 +1,6 @@
 import { MutableRefObject, Ref, RefObject } from 'react'
 
-import { isFunction } from '@utils/assertion'
+import { isFunction } from '@utils/core-utils/assertion'
 
 export type ReactRef<T> = Ref<T> | RefObject<T> | MutableRefObject<T>
 

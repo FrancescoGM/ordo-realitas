@@ -1,5 +1,5 @@
 import * as Primitives from '@radix-ui/react-avatar'
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const AvatarRoot = styled(Primitives.Root, {
   borderRadius: '$pill',

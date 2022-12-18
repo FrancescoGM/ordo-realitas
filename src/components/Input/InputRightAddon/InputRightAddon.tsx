@@ -1,8 +1,17 @@
+import { forwardRef } from 'react'
+
 import { InputRightAddonRoot } from './InputRightAddon.styles'
 import { InputRightAddonProps } from './InputRightAddon.types'
 
-export function InputRightAddon({ children, ...rest }: InputRightAddonProps) {
-  return <InputRightAddonRoot {...rest}>{children}</InputRightAddonRoot>
-}
+export const InputRightAddon = forwardRef<
+  HTMLSpanElement,
+  InputRightAddonProps
+>(({ children, ...rest }, ref) => {
+  return (
+    <InputRightAddonRoot ref={ref} {...rest}>
+      {children}
+    </InputRightAddonRoot>
+  )
+})
 
-InputRightAddon.id = 'InputRightAddon'
+InputRightAddon.displayName = 'InputRightAddon'

@@ -1,6 +1,6 @@
 import { Checkbox } from '@components/Checkbox'
 import { Text } from '@components/Text'
-import { styled } from '@stitches'
+import { styled } from '@stitches-config'
 
 export const CharacterItemRoot = styled('li', {
   position: 'relative',
