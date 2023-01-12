@@ -1,0 +1,4 @@
+{
+  "extends": "@ordo-realitas/ts-config/tsconfig.base.json",
+  "include": ["src"]
+}

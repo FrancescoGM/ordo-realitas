@@ -1,0 +1,45 @@
+import {
+  borderWidths,
+  fontSizes,
+  fontWeights,
+  fonts,
+  lineHeights,
+  radii,
+  space,
+  media,
+  shadows,
+  sizes,
+  utils,
+  zIndices,
+  darkColors,
+} from '@ordo-realitas/tokens'
+import { createStitches } from '@stitches/react'
+
+export const {
+  styled,
+  config,
+  createTheme,
+  css,
+  getCssText,
+  globalCss,
+  keyframes,
+  prefix,
+  reset,
+  theme,
+} = createStitches({
+  theme: {
+    colors: darkColors,
+    fontSizes,
+    fontWeights,
+    fonts,
+    lineHeights,
+    radii,
+    space,
+    shadows,
+    sizes,
+    zIndices,
+    borderWidths,
+  },
+  media,
+  utils,
+})

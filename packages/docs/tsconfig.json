@@ -1,0 +1,4 @@
+{
+  "extends": "@ordo-realitas/ts-config/tsconfig.react.json",
+  "include": ["src"],
+}

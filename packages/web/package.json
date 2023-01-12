@@ -1,0 +1,39 @@
+{
+  "name": "@ordo-realitas/web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
+    "@ordo-realitas/eslint-config": "*",
+    "@ordo-realitas/tokens": "*",
+    "@ordo-realitas/ts-config": "*",
+    "@stitches/react": "^1.2.8",
+    "axios": "^0.26.1",
+    "next": "^12.3.0",
+    "nookies": "^2.5.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-hook-form": "^7.41.3",
+    "react-icons": "^4.3.1",
+    "react-query": "^3.39.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/gapi": "^0.0.41",
+    "@types/gapi.auth2": "^0.0.56",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.12",
+    "jsdom": "^20.0.2",
+    "typescript": "4.7.4",
+    "vite": "^3.2.2",
+    "vite-tsconfig-paths": "^3.5.2",
+    "vitest": "^0.24.4"
+  }
+}

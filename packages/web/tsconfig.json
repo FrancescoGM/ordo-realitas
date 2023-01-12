@@ -1,0 +1,44 @@
+{
+  "extends": "@ordo-realitas/ts-config/tsconfig.next.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@stitches-config": [
+        "../stitches.config"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@interfaces/*": [
+        "interfaces/*"
+      ],
+      "@contexts/*": [
+        "contexts/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@modules/*": [
+        "modules/*"
+      ]
+    },
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src"
+  ]
+}

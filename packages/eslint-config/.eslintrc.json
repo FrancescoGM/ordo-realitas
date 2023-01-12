@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
+  },
+  "extends": ["@rocketseat/eslint-config/react"],
+  "plugins": ["import-helpers"],
+  "rules": {
+    "camelcase": "off",
+    "import/prefer-default-export": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react/", "/^next/"],
+          ["module", "absolute"],
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "semi": false,
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}

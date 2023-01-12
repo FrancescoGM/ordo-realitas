@@ -1,3 +1,9 @@
-/*.js
+# Outputs
+.next
+dist
+
+# Dependencies
 node_modules
-next
+
+# Other
+/*.js
