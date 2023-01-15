@@ -1,4 +1,8 @@
+import { Slot } from '@radix-ui/react-slot'
+
 import { styled } from '../../styles'
+
+export const TextSlot = styled(Slot)
 
 export const TextRoot = styled('p', {
   fontFamily: '$highlight',

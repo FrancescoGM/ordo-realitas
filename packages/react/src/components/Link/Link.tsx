@@ -1,14 +1,27 @@
-import { forwardRef } from 'react'
+import { forwardRef, useMemo } from 'react'
 
-import { LinkRoot } from './Link.styles'
+import { LinkRoot, LinkSlot } from './Link.styles'
 import { LinkProps } from './Link.types'
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, ...rest }, ref) => {
+  ({ children, asChild, external, ...rest }, ref) => {
+    const Comp = asChild ? LinkSlot : LinkRoot
+
+    const externalArgs = useMemo(
+      () =>
+        external
+          ? {
+              target: '_blank',
+              rel: 'noopener',
+            }
+          : {},
+      [external],
+    )
+
     return (
-      <LinkRoot ref={ref} {...rest}>
+      <Comp ref={ref} {...rest} {...externalArgs}>
         {children}
-      </LinkRoot>
+      </Comp>
     )
   },
 )

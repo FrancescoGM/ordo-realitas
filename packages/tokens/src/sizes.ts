@@ -12,5 +12,5 @@ export const sizes = {
   '16': '4rem',
   '20': '5rem',
   '40': '10rem',
-  window: '1120px',
+  window: '1280px',
 }

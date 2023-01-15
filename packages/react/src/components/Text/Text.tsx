@@ -1,14 +1,16 @@
 import { forwardRef } from 'react'
 
-import { TextRoot } from './Text.styles'
+import { TextRoot, TextSlot } from './Text.styles'
 import { TextProps } from './Text.types'
 
-export const Text = forwardRef<HTMLElement, TextProps>(
-  ({ children, noOfLines, ...rest }, ref) => {
+export const Text = forwardRef<HTMLParagraphElement, TextProps>(
+  ({ children, asChild, noOfLines, ...rest }, ref) => {
+    const Comp = asChild ? TextSlot : TextRoot
+
     return (
-      <TextRoot ref={ref} css={{ noOfLines }} {...rest}>
+      <Comp ref={ref} css={{ noOfLines }} {...rest}>
         {children}
-      </TextRoot>
+      </Comp>
     )
   },
 )

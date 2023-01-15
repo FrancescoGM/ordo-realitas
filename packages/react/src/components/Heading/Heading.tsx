@@ -1,14 +1,19 @@
 import { forwardRef } from 'react'
 
-import { HeadingRoot } from './Heading.styles'
+import { HeadingRoot, HeadingSlot } from './Heading.styles'
 import { HeadingProps } from './Heading.types'
 
 export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ children, noOfLines, ...rest }, ref) => {
+  (
+    { children, asChild, noOfLines, fontWeight, fontSize = '$md', ...rest },
+    ref,
+  ) => {
+    const Comp = asChild ? HeadingSlot : HeadingRoot
+
     return (
-      <HeadingRoot ref={ref} css={{ noOfLines }} {...rest}>
+      <Comp ref={ref} css={{ noOfLines, fontWeight, fontSize }} {...rest}>
         {children}
-      </HeadingRoot>
+      </Comp>
     )
   },
 )

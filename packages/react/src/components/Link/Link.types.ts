@@ -7,4 +7,6 @@ import { LinkRoot } from './Link.styles'
 export type LinkProps = VariantProps<typeof LinkRoot> &
   ComponentProps<typeof LinkRoot> & {
     as?: ReactElement | ComponentType
+    asChild?: boolean
+    external?: boolean
   }

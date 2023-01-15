@@ -2,20 +2,18 @@ import { styled } from '@stitches-config'
 
 export const HeaderRoot = styled('header', {
   width: '100%',
-  height: '80px',
+  height: '64px',
 
   position: 'sticky',
   top: '0',
   zIndex: '$header',
 
-  backgroundColor: '$mauve2',
+  backgroundFilter: 'blur(24px)',
   paddingInline: '$4',
 
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-
-  boxShadow: '$soft',
 })
 
 export const HeaderContent = styled('div', {
@@ -25,4 +23,9 @@ export const HeaderContent = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  button: {
+    borderRadius: '$pill',
+    fontSize: '$sm',
+  },
 })

@@ -21,9 +21,11 @@ export const globalCSS = globalCss({
     },
   },
   body: {
-    background: '$mauve1',
     color: '$mauve11',
     fontFamily: '$default',
+
+    background:
+      'linear-gradient(to bottom right, $colors$mauve1, $colors$violet2)',
   },
   'body, input, textarea, select, button': {
     fontFamily: '$default',

@@ -1,4 +1,8 @@
+import { Slot } from '@radix-ui/react-slot'
+
 import { styled } from '../../styles'
+
+export const LinkSlot = styled(Slot)
 
 export const LinkRoot = styled('a', {
   fontFamily: '$default',

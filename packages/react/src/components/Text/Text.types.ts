@@ -44,4 +44,5 @@ export type TextProps = HTMLAttributes<HTMLElement> &
     noOfLines?: number
     children?: ReactNode
     as?: As
+    asChild?: boolean
   }

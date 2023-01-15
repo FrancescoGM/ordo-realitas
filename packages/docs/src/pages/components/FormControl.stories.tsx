@@ -56,7 +56,7 @@ export const FormControl: ComponentStory<typeof FormControlComponent> = (
   return (
     <FormControlComponent {...args}>
       <FormLabel>Password</FormLabel>
-      <Input />
+      <Input placeholder="Informe seu ..." />
       <FormHelperText>
         Password must have between 9 and 18 letters
       </FormHelperText>
@@ -70,7 +70,7 @@ export const FormControlWithErrorMessage: ComponentStory<
   return (
     <FormControlComponent {...args}>
       <FormLabel>Password</FormLabel>
-      <Input />
+      <Input placeholder="Informe seu ..." />
       <FormErrorMessage>Password is required</FormErrorMessage>
     </FormControlComponent>
   )
@@ -82,7 +82,7 @@ export const FormControlWithErrorMessageAndHelperText: ComponentStory<
   return (
     <FormControlComponent {...args}>
       <FormLabel>Password</FormLabel>
-      <Input />
+      <Input placeholder="Informe seu ..." />
       <FormHelperText>
         Password must have between 9 and 18 letters
       </FormHelperText>
@@ -103,7 +103,7 @@ export const FormControlWithOptionalIndicator: ComponentStory<
       >
         Password
       </FormLabel>
-      <Input />
+      <Input placeholder="Informe seu ..." />
     </FormControlComponent>
   )
 }
@@ -120,7 +120,7 @@ export const FormControlWithDifferentRequiredIndicator: ComponentStory<
       >
         Password
       </FormLabel>
-      <Input />
+      <Input placeholder="Informe seu ..." />
     </FormControlComponent>
   )
 }

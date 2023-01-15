@@ -14,6 +14,7 @@ export const ButtonRoot = styled('button', {
   gap: '$4',
 
   fontSize: '$xl',
+  fontFamily: '$default',
   fontWeight: '$bold',
   color: '$mauve12',
   lineHeight: '$shorter',

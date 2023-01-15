@@ -1,4 +1,4 @@
 export const fonts = {
-  default: '"Roboto", sans-serif',
-  highlight: '"Roboto Condensed", sans-serif',
+  default: '"Inter", sans-serif',
+  highlight: '"Poppins", sans-serif',
 }
